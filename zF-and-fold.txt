@@ -1,0 +1,5 @@
+							*zF*
+zF		Create a fold for [count] lines.  Works like "zf".
+
+:{range}fo[ld]						*:fold* *:fo*
+		Create a fold for the lines in {range}.  Works like "zf".

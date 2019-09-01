@@ -1,0 +1,9 @@
+[]	(with 'nomagic': \[])		*/[]* */\[]* */\_[]* */collection*
+\_[]
+	A collection.  This is a sequence of characters enclosed in brackets.
+	It matches any single character in the collection.
+	Example		matches ~
+	[xyz]		any 'x', 'y' or 'z'
+	[a-zA-Z]$	any alphabetic character at the end of a line
+	\c[a-z]$	same
+	[А-яЁё]		Russian alphabet (with utf-8 and cp1251)

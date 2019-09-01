@@ -1,0 +1,5 @@
+							*E77*  >
+  Too many file names
+
+When expanding file names, more than one match was found.  Only one match is
+allowed for the command that was used.

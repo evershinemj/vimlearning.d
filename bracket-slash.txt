@@ -1,0 +1,8 @@
+						*[star* *[/*
+[*  or  [/		go to [count] previous start of a C comment "/*".
+			|exclusive| motion. {not in Vi}
+
+						*]star* *]/*
+]*  or  ]/		go to [count] next end of a C comment "*/".
+			|exclusive| motion. {not in Vi}
+

@@ -1,0 +1,11 @@
+:argdo
+:autocmd
+:bufdo
+:command
+:function
+:global
+:normal
+:python
+:read !
+:write !
+:[range]!

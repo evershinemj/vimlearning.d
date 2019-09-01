@@ -1,0 +1,13 @@
+5. Text object motions					*object-motions*
+
+							*(*
+(			[count] sentences backward.  |exclusive| motion.
+
+							*)*
+)			[count] sentences forward.  |exclusive| motion.
+
+							*{*
+{			[count] paragraphs backward.  |exclusive| motion.
+
+							*}*
+}			[count] paragraphs forward.  |exclusive| motion.

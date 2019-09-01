@@ -1,0 +1,14 @@
+:breakadd func [lnum] {funcname}
+:breakadd file [lnum] {filename}
+:breakadd here
+:breaklist
+
+In debug mode:
+backtrace
+bt
+where
+
+frame [N]
+
+up
+down

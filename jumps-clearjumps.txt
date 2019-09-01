@@ -1,0 +1,10 @@
+							*:ju* *:jumps*
+:ju[mps]		Print the jump list (not a motion command).
+			{not in Vi}
+			{not available without the |+jumplist| feature}
+
+							*:cle* *:clearjumps*
+:cle[arjumps]		Clear the jump list of the current window.
+			{not in Vi}
+			{not available without the |+jumplist| feature}
+

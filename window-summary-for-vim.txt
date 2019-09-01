@@ -1,0 +1,40 @@
+
+Opening and closing windows:
+    -s        same as :sp
+            same as -s, but only works in gvim. Terminal eats (019)
+            same as :vsp
+            Create a new window and start editing an empty file in it.
+    :[N]new     same as , but make window N high
+    :[N]vnew    same as , but make window N wide
+    :[N]sf[ind]
+    :[N]sv[iew]
+    [N]^         same as :split #[N]
+    :hide
+    :hide {cmd} e.g. :hide edit Makefile
+            same as :only
+    -q        same as :q
+            same as -q, but only works in gvim. Terminal eats (017)
+
+Moving cursor among windows:
+    
+      
+
+Moving windows:
+        cursor moving with windows
+        cursor in original position
+
+Resizing windows:
+    :res[ize] [N]   resize to N lines. Without N, resize to the largest
+    :res[ize] +N    
+    :res[ize] -N
+    z{N}<CR>    same as :res[ize] N
+    :vertical :res[ize] [N]
+    :vertical :res[ize] +N
+    :vertical :res[ize] -N
+    [count]+
+    [count]-
+    [count]_  same as :res[ize] [N]
+    [count]<
+    [count]>
+    [count]|  same as :vertical :res [N]
+

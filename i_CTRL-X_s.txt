@@ -1,0 +1,14 @@
+Spelling suggestions					*compl-spelling*
+
+A word before or at the cursor is located and correctly spelled words are
+suggested to replace it.  If there is a badly spelled word in the line, before
+or under the cursor, the cursor is moved to after it.  Otherwise the word just
+before the cursor is used for suggestions, even though it isn't badly spelled.
+
+NOTE: CTRL-S suspends display in many Unix terminals.  Use 's' instead.  Type
+CTRL-Q to resume displaying.
+
+						*i_CTRL-X_CTRL-S* *i_CTRL-X_s*
+CTRL-X CTRL-S   or
+CTRL-X s		Locate the word in front of the cursor and find the
+			first spell suggestion for it.

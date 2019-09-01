@@ -1,0 +1,4 @@
+							*:ptn* *:ptnext*
+:[count]ptn[ext][!]	":tnext" in the preview window.  See |:ptag|.
+			{not in Vi}
+

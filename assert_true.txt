@@ -1,0 +1,7 @@
+assert_true({actual} [, {msg}])				*assert_true()*
+		When {actual} is not true an error message is added to
+		|v:errors|, like with |assert_equal()|.
+		A value is TRUE when it is a non-zero number.  When {actual}
+		is not a number the assert fails.
+		When {msg} is omitted an error in the form "Expected True but
+		got {actual}" is produced.

@@ -1,0 +1,12 @@
+matchstr({expr}, {pat} [, {start} [, {count}]])			*matchstr()*
+		Same as |match()|, but return the matched string.  Example: >
+			:echo matchstr("testing", "ing")
+<		results in "ing".
+		When there is no match "" is returned.
+		The {start}, if given, has the same meaning as for |match()|. >
+			:echo matchstr("testing", "ing", 2)
+<		results in "ing". >
+			:echo matchstr("testing", "ing", 5)
+<		result is "".
+		When {expr} is a |List| then the matching item is returned.
+		The type isn't changed, it's not necessarily a String.

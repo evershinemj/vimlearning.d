@@ -1,0 +1,13 @@
+The ":execute" command can only execute colon commands.  The ":normal" command
+executes Normal mode commands.  However, its argument is not an expression but
+the literal command characters.  Example: >
+
+	:normal gg=G
+
+This jumps to the first line and formats all lines with the "=" operator.
+   To make ":normal" work with an expression, combine ":execute" with it.
+Example: >
+
+	:execute "normal " . normal_commands
+
+The variable "normal_commands" must contain the Normal mode commands.

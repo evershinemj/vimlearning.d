@@ -1,0 +1,10 @@
+							*tag-priority*
+When there are multiple matches for a tag, this priority is used:
+1. "FSC"  A full matching static tag for the current file.
+2. "F C"  A full matching global tag for the current file.
+3. "F  "  A full matching global tag for another file.
+4. "FS "  A full matching static tag for another file.
+5. " SC"  An ignore-case matching static tag for the current file.
+6. "  C"  An ignore-case matching global tag for the current file.
+7. "   "  An ignore-case matching global tag for another file.
+8. " S "  An ignore-case matching static tag for another file.

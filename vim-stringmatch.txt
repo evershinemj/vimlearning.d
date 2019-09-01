@@ -1,0 +1,22 @@
+	a =~ b		matches with
+	a !~ b		does not match with
+
+The left item "a" is used as a string.  The right item "b" is used as a
+pattern, like what's used for searching.  Example: >
+
+	:if str =~ " "
+	:  echo "str contains a space"
+	:endif
+	:if str !~ '\.$'
+	:  echo "str does not end in a full stop"
+	:endif
+
+Notice the use of a single-quote string for the pattern.  This is useful,
+because backslashes would need to be doubled in a double-quote string and
+patterns tend to contain many backslashes.
+
+The 'ignorecase' option is used when comparing strings.  When you don't want
+that, append "#" to match case and "?" to ignore case.  Thus "==?" compares
+two strings to be equal while ignoring case.  And "!~#" checks if a pattern
+doesn't match, also checking the case of letters.  For the full table see
+|expr-==|.

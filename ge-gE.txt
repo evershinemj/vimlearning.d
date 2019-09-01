@@ -1,0 +1,6 @@
+							*ge*
+ge			Backward to the end of word [count] |inclusive|.
+
+							*gE*
+gE			Backward to the end of WORD [count] |inclusive|.
+

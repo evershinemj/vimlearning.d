@@ -1,0 +1,3 @@
+When a string has none of the 'f', 's', 'm' or 'e' flags, Vim assumes the
+comment string repeats at the start of each line.  The flags field may be
+empty.

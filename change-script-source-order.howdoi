@@ -1,0 +1,2 @@
+★  Answer from https://stackoverflow.com/questions/48372122/in-vim-how-do-i-change-the-order-that-scriptnames-get-sourced ★
+Put your plugins into [~/.vim/after](http://vimdoc.sourceforge.net/htmldoc/options.html#after-directory) — they will be sourced after all others.

@@ -1,0 +1,56 @@
+Using an autoload script ~
+							*autoload* *E746*
+This is introduced in the user manual, section |41.15|.
+
+Using a script in the "autoload" directory is simpler, but requires using
+exactly the right file name.  A function that can be autoloaded has a name
+like this: >
+
+	:call filename#funcname()
+
+When such a function is called, and it is not defined yet, Vim will search the
+"autoload" directories in 'runtimepath' for a script file called
+"filename.vim".  For example "~/.vim/autoload/filename.vim".  That file should
+then define the function like this: >
+
+	function filename#funcname()
+	   echo "Done!"
+	endfunction
+
+The file name and the name used before the # in the function must match
+exactly, and the defined function must have the name exactly as it will be
+called.
+
+It is possible to use subdirectories.  Every # in the function name works like
+a path separator.  Thus when calling a function: >
+
+	:call foo#bar#func()
+
+Vim will look for the file "autoload/foo/bar.vim" in 'runtimepath'.
+
+This also works when reading a variable that has not been set yet: >
+
+	:let l = foo#bar#lvar
+
+However, when the autoload script was already loaded it won't be loaded again
+for an unknown variable.
+
+When assigning a value to such a variable nothing special happens.  This can
+be used to pass settings to the autoload script before it's loaded: >
+
+	:let foo#bar#toggle = 1
+	:call foo#bar#func()
+
+Note that when you make a mistake and call a function that is supposed to be
+defined in an autoload script, but the script doesn't actually define the
+function, the script will be sourced every time you try to call the function.
+And you will get an error message every time.
+
+Also note that if you have two script files, and one calls a function in the
+other and vice versa, before the used function is defined, it won't work.
+Avoid using the autoload functionality at the toplevel.
+
+Hint: If you distribute a bunch of scripts you can pack them together with the
+|vimball| utility.  Also read the user manual |distribute-script|.
+
+==============================================================================

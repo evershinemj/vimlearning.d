@@ -1,0 +1,30 @@
+Argument handling				*E175* *E176* *:command-nargs*
+
+By default, a user defined command will take no arguments (and an error is
+reported if any are supplied).  However, it is possible to specify that the
+command can take arguments, using the -nargs attribute.  Valid cases are:
+
+	-nargs=0    No arguments are allowed (the default)
+	-nargs=1    Exactly one argument is required, it includes spaces 
+	-nargs=*    Any number of arguments are allowed (0, 1, or many),
+		    separated by white space
+	-nargs=?    0 or 1 arguments are allowed
+	-nargs=+    Arguments must be supplied, but any number are allowed
+
+Arguments are considered to be separated by (unescaped) spaces or tabs in this
+context, except when there is one argument, then the white space is part of
+the argument.
+
+Note that arguments are used as text, not as expressions.  Specifically,
+"s:var" will use the script-local variable in the script where the command was
+defined, not where it is invoked!  Example:
+    script1.vim: >
+	:let s:error = "None"
+	:command -nargs=1 Error echoerr <args>
+<   script2.vim: >
+	:source script1.vim
+	:let s:error = "Wrong!"
+	:Error s:error
+Executing script2.vim will result in "None" being echoed.  Not what you
+intended!  Calling a function may be an alternative.
+

@@ -1,0 +1,22 @@
+							*:th* *:throw* *E608*
+:th[row] {expr1}	The {expr1} is evaluated and thrown as an exception.
+			If the ":throw" is used after a |:try| but before the
+			first corresponding |:catch|, commands are skipped
+			until the first ":catch" matching {expr1} is reached.
+			If there is no such ":catch" or if the ":throw" is
+			used after a ":catch" but before the |:finally|, the
+			commands following the ":finally" (if present) up to
+			the matching |:endtry| are executed.  If the ":throw"
+			is after the ":finally", commands up to the ":endtry"
+			are skipped.  At the ":endtry", this process applies
+			again for the next dynamically surrounding ":try"
+			(which may be found in a calling function or sourcing
+			script), until a matching ":catch" has been found.
+			If the exception is not caught, the command processing
+			is terminated.
+			Example: >
+		:try | throw "oops" | catch /^oo/ | echo "caught" | endtry
+<			Note that "catch" may need to be on a separate line
+			for when an error causes the parsing to skip the whole
+			line and not see the "|" that separates the commands.
+

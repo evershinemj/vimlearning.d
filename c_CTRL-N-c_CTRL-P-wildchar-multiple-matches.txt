@@ -1,0 +1,8 @@
+							*c_CTRL-N*
+CTRL-N		After using 'wildchar' which got multiple matches, go to next
+		match.  Otherwise recall more recent command-line from history.
+<S-Tab>							*c_CTRL-P* *c_<S-Tab>*
+CTRL-P		After using 'wildchar' which got multiple matches, go to
+		previous match.  Otherwise recall older command-line from
+		history.  <S-Tab> only works with the GUI, on the Amiga and
+		with MS-DOS.

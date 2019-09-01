@@ -1,0 +1,4 @@
+							*zE* *E352*
+zE		Eliminate all folds in the window.
+		This only works when 'foldmethod' is "manual" or "marker".
+		Also see |fold-delete-marker|.

@@ -1,0 +1,6 @@
+zg      add word under the cursor to 'spellfile', and mark it a good word
+zw      add word under the cursor to 'spellfile', and mark it a wrong word
+z=      normal mode spell suggestion
+]s      move to the next wrong word
+[s      move to the previous wrong word
+_s    insert mode spell suggestion

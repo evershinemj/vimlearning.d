@@ -1,0 +1,6 @@
+:[count]cNf[ile][!]			*:cpf* *:cpfile* *:cNf* *:cNfile*
+:[count]cpf[ile][!]	Display the last error in the [count] previous file in
+			the list that includes a file name.  If there are no
+			file names at all or if there is no next file, go to
+			the [count] previous error.  See |:cc| for [!] and
+			'switchbuf'.

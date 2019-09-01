@@ -1,0 +1,4 @@
+:[count]lN[ext][!]			*:lp* *:lprevious* *:lN* *:lNext*
+:[count]lp[revious][!]	Same as ":cNext" and ":cprevious", except the location
+			list for the current window is used instead of the
+			quickfix list.

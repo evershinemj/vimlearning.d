@@ -1,0 +1,43 @@
+The 'comments' option is a comma-separated list of parts.  Each part defines a
+type of comment string.  A part consists of:
+	{flags}:{string}
+
+{string} is the literal text that must appear.
+
+{flags}:
+  n	Nested comment.  Nesting with mixed parts is allowed.  If 'comments'
+	is "n:),n:>" a line starting with "> ) >" is a comment.
+
+  b	Blank (<Space>, <Tab> or <EOL>) required after {string}.
+
+  f	Only the first line has the comment string.  Do not repeat comment on
+	the next line, but preserve indentation (e.g., a bullet-list).
+
+  s	Start of three-piece comment
+
+  m	Middle of a three-piece comment
+
+  e	End of a three-piece comment
+
+  l	Left align. Used together with 's' or 'e', the leftmost character of
+	start or end will line up with the leftmost character from the middle.
+	This is the default and can be omitted. See below for more details.
+
+  r	Right align. Same as above but rightmost instead of leftmost. See
+	below for more details.
+
+  O	Don't consider this comment for the "O" command.
+
+  x	Allows three-piece comments to be ended by just typing the last
+	character of the end-comment string as the first action on a new
+	line when the middle-comment string has been inserted automatically.
+	See below for more details.
+
+  {digits}
+	When together with 's' or 'e': add {digit} amount of offset to an
+	automatically inserted middle or end comment leader. The offset begins
+	from a left alignment. See below for more details.
+
+  -{digits}
+	Like {digits} but reduce the indent.  This only works when there is
+	some indent for the start or end part that can be removed.

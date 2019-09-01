@@ -1,0 +1,31 @@
+==============================================================================
+6. Window resizing					*window-resize*
+
+						*CTRL-W_=*
+CTRL-W =	Make all windows (almost) equally high and wide, but use
+		'winheight' and 'winwidth' for the current window.
+		Windows with 'winfixheight' set keep their height and windows
+		with 'winfixwidth' set keep their width.
+
+:res[ize] -N					*:res* *:resize* *CTRL-W_-*
+CTRL-W -	Decrease current window height by N (default 1).
+		If used after |:vertical|: decrease width by N.
+
+:res[ize] +N					*CTRL-W_+*
+CTRL-W +	Increase current window height by N (default 1).
+		If used after |:vertical|: increase width by N.
+
+:res[ize] [N]
+CTRL-W CTRL-_					*CTRL-W_CTRL-_* *CTRL-W__*
+CTRL-W _	Set current window height to N (default: highest possible).
+
+z{nr}<CR>	Set current window height to {nr}.
+
+						*CTRL-W_<*
+CTRL-W <	Decrease current window width by N (default 1).
+
+						*CTRL-W_>*
+CTRL-W >	Increase current window width by N (default 1).
+
+:vertical res[ize] [N]			*:vertical-resize* *CTRL-W_bar*
+CTRL-W |	Set current window width to N (default: widest possible).

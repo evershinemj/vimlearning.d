@@ -1,0 +1,4 @@
+							*:ptr* *:ptrewind*
+:[count]ptr[ewind][!]	":trewind" in the preview window.  See |:ptag|.
+			{not in Vi}
+

@@ -1,0 +1,4 @@
+							*:tp* *:tprevious*
+:[count]tp[revious][!]	Jump to [count] previous matching tag (default 1).
+			See |tag-!| for [!].  {not in Vi}
+

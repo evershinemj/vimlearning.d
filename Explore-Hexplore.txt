@@ -1,0 +1,12 @@
+						*netrw-:Explore*
+:Explore  will open the local-directory browser on the current file's
+          directory (or on directory [dir] if specified).  The window will be
+	  split only if the file has been modified and |'hidden'| is not set,
+	  otherwise the browsing window will take over that window.  Normally
+	  the splitting is taken horizontally.
+	  Also see: |netrw-:Rexplore|
+:Explore! is like :Explore, but will use vertical splitting.
+
+						*netrw-:Hexplore*
+:Hexplore  [dir] does an :Explore with |:belowright| horizontal splitting.
+:Hexplore! [dir] does an :Explore with |:aboveleft|  horizontal splitting.

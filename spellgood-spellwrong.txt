@@ -1,0 +1,31 @@
+							*:spe* *:spellgood*
+:[count]spe[llgood] {word}
+			Add {word} as a good word to 'spellfile', like with
+			|zg|.  Without count the first name is used, with a
+			count of two the second entry, etc.
+
+:spe[llgood]! {word}	Add {word} as a good word to the internal word list,
+			like with |zG|.
+
+							*:spellw* *:spellwrong*
+:[count]spellw[rong] {word}
+			Add {word} as a wrong (bad) word to 'spellfile', as
+			with |zw|.  Without count the first name is used, with
+			a count of two the second entry, etc.
+
+:spellw[rong]! {word}	Add {word} as a wrong (bad) word to the internal word
+			list, like with |zW|.
+
+:[count]spellu[ndo] {word}				*:spellu* *:spellundo*
+			Like |zuw|.  [count] used as with |:spellgood|.
+
+:spellu[ndo]! {word}	Like |zuW|.  [count] used as with |:spellgood|.
+
+
+After adding a word to 'spellfile' with the above commands its associated
+".spl" file will automatically be updated and reloaded.  If you change
+'spellfile' manually you need to use the |:mkspell| command.  This sequence of
+commands mostly works well: >
+	:edit <file in 'spellfile'>
+<	(make changes to the spell file) >
+	:mkspell! %

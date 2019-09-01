@@ -1,0 +1,20 @@
+				*v:t_TYPE* *v:t_bool* *t_bool-variable*
+v:t_bool	Value of Boolean type.  Read-only.  See: |type()|
+					*v:t_channel* *t_channel-variable*
+v:t_channel	Value of Channel type.  Read-only.  See: |type()|
+					*v:t_dict* *t_dict-variable*
+v:t_dict	Value of Dictionary type.  Read-only.  See: |type()|
+					*v:t_float* *t_float-variable*
+v:t_float	Value of Float type.  Read-only.  See: |type()|
+					*v:t_func* *t_func-variable*
+v:t_func	Value of Funcref type.  Read-only.  See: |type()|
+					*v:t_job* *t_job-variable*
+v:t_job		Value of Job type.  Read-only.  See: |type()|
+					*v:t_list* *t_list-variable*
+v:t_list	Value of List type.  Read-only.  See: |type()|
+					*v:t_none* *t_none-variable*
+v:t_none	Value of None type.  Read-only.  See: |type()|
+					*v:t_number* *t_number-variable*
+v:t_number	Value of Number type.  Read-only.  See: |type()|
+					*v:t_string* *t_string-variable*
+v:t_string	Value of String type.  Read-only.  See: |type()|

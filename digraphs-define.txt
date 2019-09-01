@@ -1,0 +1,28 @@
+==============================================================================
+1. Defining digraphs					*digraphs-define*
+
+						*:dig* *:digraphs*
+:dig[raphs]		show currently defined digraphs.
+							*E104* *E39*
+:dig[raphs] {char1}{char2} {number} ...
+			Add digraph {char1}{char2} to the list.  {number} is
+			the decimal representation of the character.  Normally
+			it is the Unicode character, see |digraph-encoding|.
+			Example: >
+	:digr e: 235 a: 228
+<			Avoid defining a digraph with '_' (underscore) as the
+			first character, it has a special meaning in the
+			future.
+
+Vim is normally compiled with the |+digraphs| feature.  If the feature is
+disabled, the ":digraph" command will display an error message.
+
+Example of the output of ":digraphs": >
+ TH Þ  222  ss ß  223  a! à  224  a' á  225  a> â  226  a? ã  227  a: ä  228
+
+The first two characters in each column are the characters you have to type to
+enter the digraph.
+
+In the middle of each column is the resulting character.  This may be mangled
+if you look at it on a system that does not support digraphs or if you print
+this file.

@@ -1,0 +1,37 @@
+						*'indentexpr'* *'inde'*
+'indentexpr' 'inde'	string	(default "")
+			local to buffer
+			{not in Vi}
+			{not available when compiled without the |+cindent|
+			or |+eval| features}
+	Expression which is evaluated to obtain the proper indent for a line.
+	It is used when a new line is created, for the |=| operator and
+	in Insert mode as specified with the 'indentkeys' option.
+	When this option is not empty, it overrules the 'cindent' and
+	'smartindent' indenting.  When 'lisp' is set, this option is
+	overridden by the Lisp indentation algorithm.
+	When 'paste' is set this option is not used for indenting.
+	The expression is evaluated with |v:lnum| set to the line number for
+	which the indent is to be computed.  The cursor is also in this line
+	when the expression is evaluated (but it may be moved around).
+	The expression must return the number of spaces worth of indent.  It
+	can return "-1" to keep the current indent (this means 'autoindent' is
+	used for the indent).
+	Functions useful for computing the indent are |indent()|, |cindent()|
+	and |lispindent()|.
+	The evaluation of the expression must not have side effects!  It must
+	not change the text, jump to another window, etc.  Afterwards the
+	cursor position is always restored, thus the cursor may be moved.
+	Normally this option would be set to call a function: >
+		:set indentexpr=GetMyIndent()
+<	Error messages will be suppressed, unless the 'debug' option contains
+	"msg".
+	See |indent-expression|.
+	NOTE: This option is set to "" when 'compatible' is set.
+
+	The expression will be evaluated in the |sandbox| when set from a
+	modeline, see |sandbox-option|.
+
+	It is not allowed to change text or jump to another window while
+	evaluating 'indentexpr' |textlock|.
+

@@ -1,0 +1,10 @@
+						*'indentkeys'* *'indk'*
+'indentkeys' 'indk'	string	(default "0{,0},:,0#,!^F,o,O,e")
+			local to buffer
+			{not in Vi}
+			{not available when compiled without the |+cindent|
+			feature}
+	A list of keys that, when typed in Insert mode, cause reindenting of
+	the current line.  Only happens if 'indentexpr' isn't empty.
+	The format is identical to 'cinkeys', see |indentkeys-format|.
+	See |C-indenting| and |indent-expression|.

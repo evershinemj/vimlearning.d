@@ -1,0 +1,5 @@
+							*:pts* *:ptselect*
+:pts[elect][!] [ident]	Does ":tselect[!] [ident]" and shows the new tag in a
+			"Preview" window.  See |:ptag| for more info.
+			{not in Vi}
+

@@ -1,0 +1,5 @@
+							*i_CTRL-X_CTRL-D*
+CTRL-X CTRL-D		Search in the current and included files for the
+			first definition (or macro) name that starts with
+			the same characters as before the cursor.  The found
+			definition name is inserted in front of the cursor.

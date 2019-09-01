@@ -1,0 +1,17 @@
+Dependencies between plugins ~
+							*packload-two-steps*
+Suppose you have two plugins that depend on the same functionality. You can
+put the common functionality in an autoload directory, so that it will be
+found automatically.  Your package would have these files:
+
+	pack/foo/start/one/plugin/one.vim  >
+		call foolib#getit()
+<	pack/foo/start/two/plugin/two.vim >
+		call foolib#getit()
+<	pack/foo/start/lib/autoload/foolib.vim >
+		func foolib#getit()
+
+This works, because loading packages will first add all found directories to
+'runtimepath' before sourcing the plugins.
+
+==============================================================================

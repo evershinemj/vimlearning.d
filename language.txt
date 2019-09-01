@@ -1,0 +1,69 @@
+==============================================================================
+1. Messages						*multilang-messages*
+
+Vim picks up the locale from the environment.  In most cases this means Vim
+will use the language that you prefer, unless it's not available.
+
+To see a list of supported locale names on your system, look in one of these
+directories (for Unix):
+	/usr/lib/locale ~
+	/usr/share/locale ~
+Unfortunately, upper/lowercase differences matter.  Also watch out for the
+use of "-" and "_".
+
+					    *:lan* *:lang* *:language* *E197*
+:lan[guage]
+:lan[guage] mes[sages]
+:lan[guage] cty[pe]
+:lan[guage] tim[e]
+			Print the current language (aka locale).
+			With the "messages" argument the language used for
+			messages is printed.  Technical: LC_MESSAGES.
+			With the "ctype" argument the language used for
+			character encoding is printed.  Technical: LC_CTYPE.
+			With the "time" argument the language used for
+			strftime() is printed.  Technical: LC_TIME.
+			Without argument all parts of the locale are printed
+			(this is system dependent).
+			The current language can also be obtained with the
+			|v:lang|, |v:ctype| and |v:lc_time| variables.
+
+:lan[guage] {name}
+:lan[guage] mes[sages] {name}
+:lan[guage] cty[pe] {name}
+:lan[guage] tim[e] {name}
+			Set the current language (aka locale) to {name}.
+			The locale {name} must be a valid locale on your
+			system.  Some systems accept aliases like "en" or
+			"en_US", but some only accept the full specification
+			like "en_US.ISO_8859-1".  On Unix systems you can use
+			this command to see what locales are supported: >
+				:!locale -a
+<			With the "messages" argument the language used for
+			messages is set.  This can be different when you want,
+			for example, English messages while editing Japanese
+			text.  This sets $LC_MESSAGES.
+			With the "ctype" argument the language used for
+			character encoding is set.  This affects the libraries
+			that Vim was linked with.  It's unusual to set this to
+			a different value from 'encoding' or "C".  This sets
+			$LC_CTYPE.
+			With the "time" argument the language used for time
+			and date messages is set.  This affects strftime().
+			This sets $LC_TIME.
+			Without an argument both are set, and additionally
+			$LANG is set.
+			When compiled with the |+float| feature the LC_NUMERIC
+			value will always be set to "C", so that floating
+			point numbers use '.' as the decimal point.
+			This will make a difference for items that depend on
+			the language (some messages, time and date format).
+			Not fully supported on all systems
+			If this fails there will be an error message.  If it
+			succeeds there is no message.  Example: >
+				:language
+				Current language: C
+				:language de_DE.ISO_8859-1
+				:language mes
+				Current messages language: de_DE.ISO_8859-1
+				:lang mes en

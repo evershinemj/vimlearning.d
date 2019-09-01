@@ -1,0 +1,13 @@
+For the following two commands the cursor is not moved in the text, only the
+text scrolls on the screen.
+
+							*zs*
+zs			Scroll the text horizontally to position the cursor
+			at the start (left side) of the screen.  This only
+			works when 'wrap' is off.  {not in Vi}
+
+							*ze*
+ze			Scroll the text horizontally to position the cursor
+			at the end (right side) of the screen.  This only
+			works when 'wrap' is off.  {not in Vi}
+

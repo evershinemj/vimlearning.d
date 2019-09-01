@@ -1,0 +1,18 @@
+==============================================================================
+*44.12*	Portable syntax file layout
+
+Wouldn't it be nice if all Vim users exchange syntax files?  To make this
+possible, the syntax file must follow a few guidelines.
+
+Start with a header that explains what the syntax file is for, who maintains
+it and when it was last updated.  Don't include too much information about
+changes history, not many people will read it.  Example: >
+
+	" Vim syntax file
+	" Language:	C
+	" Maintainer:	Bram Moolenaar <Bram@vim.org>
+	" Last Change:	2001 Jun 18
+	" Remark:	Included by the C++ syntax.
+
+Use the same layout as the other syntax files.  Using an existing syntax file
+as an example will save you a lot of time.

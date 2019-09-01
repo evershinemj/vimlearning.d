@@ -1,0 +1,3 @@
+							*:ll*
+:ll[!] [nr]		Same as ":cc", except the location list for the
+			current window is used instead of the quickfix list.

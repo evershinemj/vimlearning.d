@@ -1,0 +1,6 @@
+The ignore-case matches are not found for a ":tag" command when:
+- the 'ignorecase' option is off and 'tagcase' is "followic"
+- 'tagcase' is "match"
+- 'tagcase' is "smart" and the pattern contains an upper case character.
+- 'tagcase' is "followscs" and 'smartcase' option is on and the pattern
+  contains an upper case character.

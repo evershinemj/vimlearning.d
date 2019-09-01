@@ -1,0 +1,4 @@
+3. Small delete register "-				*quote_-* *quote-*
+This register contains text from commands that delete less than one line,
+except when the command specifies a register with ["x].
+{not in Vi}

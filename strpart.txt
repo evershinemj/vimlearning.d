@@ -1,0 +1,13 @@
+strpart({src}, {start} [, {len}])			*strpart()*
+		The result is a String, which is part of {src}, starting from
+		byte {start}, with the byte length {len}.
+		To count characters instead of bytes use |strcharpart()|.
+
+		When bytes are selected which do not exist, this doesn't
+		result in an error, the bytes are simply omitted.
+		If {len} is missing, the copy continues from {start} till the
+		end of the {src}. >
+			strpart("abcdefg", 3, 2)    == "de"
+			strpart("abcdefg", -2, 4)   == "ab"
+			strpart("abcdefg", 5, 4)    == "fg"
+			strpart("abcdefg", 3)	    == "defg"

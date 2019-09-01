@@ -1,0 +1,38 @@
+USING A RANGE
+
+The ":call" command can be given a line range.  This can have one of two
+meanings.  When a function has been defined with the "range" keyword, it will
+take care of the line range itself.
+  The function will be passed the variables "a:firstline" and "a:lastline".
+These will have the line numbers from the range the function was called with.
+Example: >
+
+	:function Count_words() range
+	:  let lnum = a:firstline
+	:  let n = 0
+	:  while lnum <= a:lastline
+	:    let n = n + len(split(getline(lnum)))
+	:    let lnum = lnum + 1
+	:  endwhile
+	:  echo "found " . n . " words"
+	:endfunction
+
+You can call this function with: >
+
+	:10,30call Count_words()
+
+It will be executed once and echo the number of words.
+   The other way to use a line range is by defining a function without the
+"range" keyword.  The function will be called once for every line in the
+range, with the cursor in that line.  Example: >
+
+	:function  Number()
+	:  echo "line " . line(".") . " contains: " . getline(".")
+	:endfunction
+
+If you call this function with: >
+
+	:10,15call Number()
+
+The function will be called six times.
+

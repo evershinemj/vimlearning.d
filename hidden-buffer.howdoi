@@ -1,0 +1,63 @@
+★  Answer from https://stackoverflow.com/questions/15945157/avoid-vim-keeping-closed-buffers-open-in-the-background ★
+Check the value of the hidden option using :set hidden?. By default, vim has this set to nohidden, which should produce the behaviour you're asking for; buffers are unloaded when they become abandoned (meaning no windows are displaying them). It's possible that this setting got set to hidden, which causes the behaviour you're experiencing; buffers become hidden when abandoned.
+Do :help 'hidden' for more information.
+
+================================================================================
+
+★  Answer from https://webcache.googleusercontent.com/search?q=cache:cSSQBlA8FR4J:https://stackoverflow.com/questions/15945157/avoid-vim-keeping-closed-buffers-open-in-the-background+&cd=1&hl=en&ct=clnk&gl=us ★
+Check the value of the hidden option using :set hidden?. By default, vim has this set to nohidden, which should produce the behaviour you're asking for; buffers are unloaded when they become abandoned (meaning no windows are displaying them). It's possible that this setting got set to hidden, which causes the behaviour you're experiencing; buffers become hidden when abandoned.
+Do :help 'hidden' for more information.
+
+================================================================================
+
+★  Answer from https://stackoverflow.com/questions/48731824/what-is-a-modified-hidden-buffer-can-i-disable-this-thing ★
+Set options [autowrite](http://vimdoc.sourceforge.net/htmldoc/options.html#'autowrite') and autowriteall. They allow to write the contents of the file, if it has been modified, on each :next, :rewind, :last, :first, :previous, :stop, :suspend, :tag, :!, :make, CTRL-] and CTRL-^; autowriteall also used for commands ":edit", ":enew", ":quit", ":qall", ":exit", ":xit", ":recover" and closing the Vim window.
+:set autowrite
+:set autowriteall
+
+in the current session. Put "set autowrite" and "set autowriteall" in ~/.vimrc to make this automatic in the future sessions.
+If you don't want to automatically write modified buffers but simply switch to another buffer
+:set hidden
+
+(again, both in command line and ~/.vimrc).
+If autowrite doesn't work it probably means that the buffer doesn't have a name (isn't associated with a file) — in that case vim cannot write the buffer. set hidden helps here but not for :q. vim can automatically save files but cannot (and shouldn't) automatically discard changes. You have to discard them explicitly with :qa!. This is safety feature.
+
+================================================================================
+
+★  Answer from https://webcache.googleusercontent.com/search?q=cache:fG977YYhWkIJ:https://stackoverflow.com/questions/48731824/what-is-a-modified-hidden-buffer-can-i-disable-this-thing+&cd=2&hl=en&ct=clnk&gl=us ★
+Set options [autowrite](http://vimdoc.sourceforge.net/htmldoc/options.html#'autowrite') and autowriteall. They allow to write the contents of the file, if it has been modified, on each :next, :rewind, :last, :first, :previous, :stop, :suspend, :tag, :!, :make, CTRL-] and CTRL-^; autowriteall also used for commands ":edit", ":enew", ":quit", ":qall", ":exit", ":xit", ":recover" and closing the Vim window.
+:set autowrite
+:set autowriteall
+
+in the current session. Put "set autowrite" and "set autowriteall" in ~/.vimrc to make this automatic in the future sessions.
+If you don't want to automatically write modified buffers but simply switch to another buffer
+:set hidden
+
+(again, both in command line and ~/.vimrc).
+If autowrite doesn't work it probably means that the buffer doesn't have a name (isn't associated with a file) — in that case vim cannot write the buffer. set hidden helps here but not for :q. vim can automatically save files but cannot (and shouldn't) automatically discard changes. You have to discard them explicitly with :qa!. This is safety feature.
+
+================================================================================
+
+★  Answer from https://stackoverflow.com/questions/1675688/make-vim-show-all-white-spaces-as-a-character ★
+As others have said, you could use
+:set list
+
+which will, in combination with
+:set listchars=...
+
+display invisible characters.
+
+Now, there isn't an explicit option which you can use to show whitespace, but in listchars, you could set a character to show for everything BUT whitespace. For example, mine looks like this
+:set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+
+so, now, after you use
+:set list
+
+everything that isn't explicitly shown as something else, is then, really, a plain old whitespace.
+As usual, to understand how listchars works, use the help. It provides great information about what chars can be displayed (like trailing space, for instance) and how to do it:
+:help listchars
+
+It might be helpful to add a toggle to it so you can see the changes mid editing easily (source: [VIM :set list! as a toggle in .vimrc](https://stackoverflow.com/questions/12534313/vim-set-list-as-a-toggle-in-vimrc)):
+noremap <F5> :set list!<CR>
+inoremap <F5> <C-o>:set list!<CR>
+cnoremap <F5> <C-c>:set list!<CR>

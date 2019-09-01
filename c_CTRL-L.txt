@@ -1,0 +1,6 @@
+							*c_CTRL-L*
+CTRL-L		A match is done on the pattern in front of the cursor.  If
+		there is one match, it is inserted in place of the pattern.
+		If there are multiple matches the longest common part is
+		inserted in place of the pattern.  If the result is shorter
+		than the pattern, no completion is done.

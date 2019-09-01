@@ -1,0 +1,15 @@
+stridx({haystack}, {needle} [, {start}])		*stridx()*
+		The result is a Number, which gives the byte index in
+		{haystack} of the first occurrence of the String {needle}.
+		If {start} is specified, the search starts at index {start}.
+		This can be used to find a second match: >
+			:let colon1 = stridx(line, ":")
+			:let colon2 = stridx(line, ":", colon1 + 1)
+<		The search is done case-sensitive.
+		For pattern searches use |match()|.
+		-1 is returned if the {needle} does not occur in {haystack}.
+		See also |strridx()|.
+		Examples: >
+		  :echo stridx("An Example", "Example")	     3
+		  :echo stridx("Starting point", "Start")    0
+		  :echo stridx("Starting point", "start")   -1

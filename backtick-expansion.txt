@@ -1,0 +1,13 @@
+					*backtick-expansion* *`-expansion*
+On Unix and a few other systems you can also use backticks for the file name
+argument, for example: >
+	:next `find . -name ver\\*.c -print`
+	:view `ls -t *.patch  \| head -n1`
+The backslashes before the star are required to prevent the shell from
+expanding "ver*.c" prior to execution of the find program.  The backslash
+before the shell pipe symbol "|" prevents Vim from parsing it as command
+termination.
+This also works for most other systems, with the restriction that the
+backticks must be around the whole item.  It is not possible to have text
+directly before the first or just after the last backtick.
+

@@ -1,0 +1,3 @@
+							*c_CTRL-A*
+CTRL-A		All names that match the pattern in front of the cursor are
+		inserted.

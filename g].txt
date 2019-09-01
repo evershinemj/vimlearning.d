@@ -1,0 +1,4 @@
+							*g]*
+g]			Like CTRL-], but use ":tselect" instead of ":tag".
+			{not in Vi}
+

@@ -1,0 +1,5 @@
+							*i_CTRL-X_CTRL-I*
+CTRL-X CTRL-I		Search for the first keyword in the current and
+			included files that starts with the same characters
+			as those before the cursor.  The matched keyword is
+			inserted in front of the cursor.

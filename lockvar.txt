@@ -1,0 +1,13 @@
+:lockv[ar][!] [depth] {name} ...			*:lockvar* *:lockv*
+			Lock the internal variable {name}.  Locking means that
+			it can no longer be changed (until it is unlocked).
+			A locked variable can be deleted: >
+				:lockvar v
+				:let v = 'asdf'		" fails!
+				:unlet v
+<							*E741* *E940*
+			If you try to change a locked variable you get an
+			error message: "E741: Value is locked: {name}".
+			If you try to lock or unlock a built-in variable you
+			get an error message: "E940: Cannot lock or unlock
+			variable {name}".

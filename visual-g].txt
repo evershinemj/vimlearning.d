@@ -1,0 +1,4 @@
+							*v_g]*
+{Visual}g]		Same as "g]", but use the highlighted text as the
+			identifier.  {not in Vi}
+

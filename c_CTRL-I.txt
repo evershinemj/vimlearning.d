@@ -1,0 +1,11 @@
+					*c_CTRL-I* *c_wildchar* *c_<Tab>*
+'wildchar' option
+		A match is done on the pattern in front of the cursor.  The
+		match (if there are several, the first match) is inserted
+		in place of the pattern.  (Note: does not work inside a
+		macro, because <Tab> or <Esc> are mostly used as 'wildchar',
+		and these have a special meaning in some macros.) When typed
+		again and there were multiple matches, the next
+		match is inserted.  After the last match, the first is used
+		again (wrap around).
+		The behavior can be changed with the 'wildmode' option.

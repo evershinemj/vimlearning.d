@@ -1,0 +1,12 @@
+★  Answer from https://stackoverflow.com/questions/916875/yank-file-name-path-of-current-buffer-in-vim ★
+TL;DR
+:let @" = expand("%")>
+this will copy the file name to the unamed register, then you can use good old p to paste it. and of course you can map this to a key for quicker use.
+:nmap cp :let @" = expand("%")<cr>
+you can also use this for full path
+:let @" = expand("%:p")
+Explanation
+Vim uses the unnamed register to store text that has been deleted or copied (yanked), likewise when you paste it reads the text from this register.
+Using let we can manually store text in the register using :let @" = "text" but we can also store the result of an expression.
+In the above example we use the function expand which expands wildcards and keywords. in our example we use expand('%') to expand the current file name. We can modify it as expand('%:p') for the full file name. 
+See :help let :help expand :help registers for details

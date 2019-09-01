@@ -1,0 +1,42 @@
+These commands see the '|' as their argument, and can therefore not be
+followed by another Vim command:
+    :argdo
+    :autocmd
+    :bufdo
+    :cdo
+    :cfdo
+    :command
+    :cscope
+    :debug
+    :folddoopen
+    :folddoclosed
+    :function
+    :global
+    :help
+    :helpfind
+    :lcscope
+    :ldo
+    :lfdo
+    :make
+    :normal
+    :perl
+    :perldo
+    :promptfind
+    :promptrepl
+    :pyfile
+    :python
+    :registers
+    :read !
+    :scscope
+    :sign
+    :tcl
+    :tcldo
+    :tclfile
+    :vglobal
+    :windo
+    :write !
+    :[range]!
+    a user defined command without the "-bar" argument |:command|
+
+Note that this is confusing (inherited from Vi): With ":g" the '|' is included
+in the command, with ":s" it is not.

@@ -1,0 +1,10 @@
+						*wildcard* *wildcards*
+Wildcards in {file} are expanded, but as with file completion, 'wildignore'
+and 'suffixes' apply.  Which wildcards are supported depends on the system.
+These are the common ones:
+	?	matches one character
+	*	matches anything, including nothing
+	**	matches anything, including nothing, recurses into directories
+	[abc]	match 'a', 'b' or 'c'
+
+To avoid the special meaning of the wildcards prepend a backslash.  However,

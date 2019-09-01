@@ -1,0 +1,4 @@
+							*:sts* *:stselect*
+:sts[elect][!] [ident]	Does ":tselect[!] [ident]" and splits the window for
+			the selected tag.  {not in Vi}
+

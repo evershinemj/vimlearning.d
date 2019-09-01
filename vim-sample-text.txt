@@ -1,0 +1,15 @@
+vim: set textwidth=60 filetype=vim list:
+" use set list in modeline if you want to see
+" special variables in a specific file
+
+" set list listchars?
+" note that trail:@ in listchars means that only trailing
+" whitespace is shown with '@', not every whitespace!
+" this is why in insert mode typing a trailing space results
+" in '@' temporarily shown, which soon disappears since the
+" next typed char makes the space not trailing any more
+
+use set list! to toggle the list bool, so you can use
+@: to toggle again
+set list makes <Space><Tab> rendered as ' t~~~~~~'
+ 	this is a sample text file

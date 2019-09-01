@@ -1,0 +1,4 @@
+★  Answer from https://stackoverflow.com/questions/15129517/what-is-the-difference-between-bufread-and-bufenter ★
+A buffer is the in-memory representation of a file; to edit one, it has to be displayed in a window.
+The BufRead event is triggered after Vim has read the file into its memory. Unless you reload via :edit!, this only happens once.
+The BufEnter is fired whenever you activate a certain buffer, i.e. when it becomes the buffer the cursor is in. For example when you have split windows that show different buffers, and you move between then. Also in a single window, when you use a command like <C-^>, :bnext to change which buffer is currently edited.

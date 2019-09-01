@@ -1,0 +1,6 @@
+						*unlisted-buffer*
+unlisted	The buffer is not in the buffer list.  It is not used for
+		normal editing, but to show a help file, remember a file name
+		or marks.  The ":bdelete" command will also set this option,
+		thus it doesn't completely delete the buffer.  Settings: >
+			:setlocal nobuflisted

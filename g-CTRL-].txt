@@ -1,0 +1,4 @@
+							*g_CTRL-]*
+g CTRL-]		Like CTRL-], but use ":tjump" instead of ":tag".
+			{not in Vi}
+

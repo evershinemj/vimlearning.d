@@ -1,0 +1,4 @@
+							*:tl* *:tlast*
+:tl[ast][!]		Jump to last matching tag.  See |tag-!| for [!].  {not
+			in Vi}
+

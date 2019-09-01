@@ -1,0 +1,16 @@
+							*g;* *E662*
+g;			Go to [count] older position in change list.
+			If [count] is larger than the number of older change
+			positions go to the oldest change.
+			If there is no older change an error message is given.
+			(not a motion command)
+			{not in Vi}
+			{not available without the |+jumplist| feature}
+
+							*g,* *E663*
+g,			Go to [count] newer cursor position in change list.
+			Just like |g;| but in the opposite direction.
+			(not a motion command)
+			{not in Vi}
+			{not available without the |+jumplist| feature}
+

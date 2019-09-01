@@ -1,0 +1,11 @@
+:[N]bw[ipeout][!]			*:bw* *:bwipe* *:bwipeout* *E517*
+:bw[ipeout][!] {bufname}
+:N,Mbw[ipeout][!]
+:bw[ipeout][!] N1 N2 ...
+		Like |:bdelete|, but really delete the buffer.  Everything
+		related to the buffer is lost.  All marks in this buffer
+		become invalid, option settings are lost, etc.  Don't use this
+		unless you know what you are doing. Examples: >
+		    :.+,$bwipeout   " wipe out all buffers after the current
+				    " one
+		    :%bwipeout	    " wipe out all buffers

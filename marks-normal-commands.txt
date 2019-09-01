@@ -1,0 +1,33 @@
+							*'[* *`[*
+'[  `[			To the first character of the previously changed
+			or yanked text.  {not in Vi}
+
+							*']* *`]*
+']  `]			To the last character of the previously changed or
+			yanked text.  {not in Vi}
+
+							*'<* *`<*
+'<  `<			To the first line or character of the last selected
+			Visual area in the current buffer.  For block mode it
+			may also be the last character in the first line (to
+			be able to define the block).  {not in Vi}.
+
+							*'>* *`>*
+'>  `>			To the last line or character of the last selected
+			Visual area in the current buffer.  For block mode it
+			may also be the first character of the last line (to
+			be able to define the block).  Note that 'selection'
+			applies, the position may be just after the Visual
+			area.  {not in Vi}.
+
+
+							*'.* *`.*
+'.  `.			To the position where the last change was made.  The
+			position is at or near where the change started.
+			Sometimes a command is executed as several changes,
+			then the position can be near the end of what the
+			command changed.  For example when inserting a word,
+			the position will be on the last character.
+			To jump to older changes use |g;|.
+			{not in Vi}
+

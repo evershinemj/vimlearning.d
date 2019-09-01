@@ -1,0 +1,5 @@
+							*fold-create-marker*
+"zf" can be used to create a fold defined by markers.  Vim will insert the
+markers for you.  Vim will append the start and end marker, as specified with
+'foldmarker'.  The markers are appended to the end of the line.
+'commentstring' is used if it isn't empty.

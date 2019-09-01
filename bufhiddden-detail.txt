@@ -1,0 +1,23 @@
+						*'bufhidden'* *'bh'*
+'bufhidden' 'bh'	string (default: "")
+			local to buffer
+			{not in Vi}
+	This option specifies what happens when a buffer is no longer
+	displayed in a window:
+	  <empty>	follow the global 'hidden' option
+	  hide		hide the buffer (don't unload it), also when 'hidden'
+			is not set
+	  unload	unload the buffer, also when 'hidden' is set or using
+			|:hide|
+	  delete	delete the buffer from the buffer list, also when
+			'hidden' is set or using |:hide|, like using
+			|:bdelete|
+	  wipe		wipe out the buffer from the buffer list, also when
+			'hidden' is set or using |:hide|, like using
+			|:bwipeout|
+
+	CAREFUL: when "unload", "delete" or "wipe" is used changes in a buffer
+	are lost without a warning.  Also, these values may break autocommands
+	that switch between buffers temporarily.
+	This option is used together with 'buftype' and 'swapfile' to specify
+	special kinds of buffers.   See |special-buffers|.

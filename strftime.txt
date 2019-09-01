@@ -1,0 +1,18 @@
+strftime({format} [, {time}])				*strftime()*
+		The result is a String, which is a formatted date and time, as
+		specified by the {format} string.  The given {time} is used,
+		or the current time if no time is given.  The accepted
+		{format} depends on your system, thus this is not portable!
+		See the manual page of the C function strftime() for the
+		format.  The maximum length of the result is 80 characters.
+		See also |localtime()| and |getftime()|.
+		The language can be changed with the |:language| command.
+		Examples: >
+		  :echo strftime("%c")		   Sun Apr 27 11:49:23 1997
+		  :echo strftime("%Y %b %d %X")	   1997 Apr 27 11:53:25
+		  :echo strftime("%y%m%d %T")	   970427 11:53:55
+		  :echo strftime("%H:%M")	   11:55
+		  :echo strftime("%c", getftime("file.c"))
+						   Show mod time of file.c.
+<		Not available on all systems.  To check use: >
+			:if exists("*strftime")

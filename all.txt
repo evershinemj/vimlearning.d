@@ -1,0 +1,21 @@
+:[N]al[l][!] [N]				*:al* *:all* *:sal* *:sall*
+:[N]sal[l][!] [N]
+		Rearrange the screen to open one window for each argument.
+		All other windows are closed.  When a count is given, this is
+		the maximum number of windows to open.
+		With the |:tab| modifier open a tab page for each argument.
+		When there are more arguments than 'tabpagemax' further ones
+		become split windows in the last tab page.
+		When the 'hidden' option is set, all buffers in closed windows
+		become hidden.
+		When 'hidden' is not set, and the 'autowrite' option is set,
+		modified buffers are written.  Otherwise, windows that have
+		buffers that are modified are not removed, unless the [!] is
+		given, then they become hidden.  But modified buffers are
+		never abandoned, so changes cannot get lost.
+		[N] is the maximum number of windows to open.  'winheight'
+		also limits the number of windows opened ('winwidth' if
+		|:vertical| was prepended).
+		Buf/Win Enter/Leave autocommands are not executed for the new
+		windows here, that's only done when they are really entered.
+

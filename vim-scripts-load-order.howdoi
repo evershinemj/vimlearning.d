@@ -1,0 +1,2 @@
+★  Answer from https://stackoverflow.com/questions/4464375/what-is-the-load-order-of-scripts-when-you-start-up-vim ★
+The help entry is way too long to post here, but it lists the order of everything that vim does at initialization.  See :help initialization.

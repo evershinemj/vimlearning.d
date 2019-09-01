@@ -1,0 +1,6 @@
+rename({from}, {to})					*rename()*
+		Rename the file by the name {from} to the name {to}.  This
+		should also work to move files across file systems.  The
+		result is a Number, which is 0 if the file was renamed
+		successfully, and non-zero when the renaming failed.
+		NOTE: If {to} exists it is overwritten without warning.

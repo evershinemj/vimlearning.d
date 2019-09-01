@@ -1,0 +1,5 @@
+It is normal that the last few changes can not be recovered.  Vim flushes the
+changes to disk when you don't type for about four seconds, or after typing
+about two hundred characters.  This is set with the 'updatetime' and
+'updatecount' options.  Thus when Vim didn't get a chance to save itself when
+the system went down, the changes after the last flush will be lost.

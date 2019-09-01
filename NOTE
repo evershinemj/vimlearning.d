@@ -1,0 +1,22 @@
+// IMPORTANT
+// REMEMBER TO ADD ! TO PREVENT ERROR
+// :w! >> ... appends to a file even when it doesn't exist
+:w! >> $VIMLEARNING/...
+
+type {char} to avoid mapping
+e.g. {
+
+when a command disables input, the cause might be that it executes
+a time-consuming sub-command, like shell command `find`
+
+to make the input normal again, type CTRL-C
+
+before executing :argadd, make sure the current directory is right
+
+execute :cd % to enter the right directory if a directory is passed as 
+an arg to vim (namely in netrw mode)
+
+if the current directory is in the upper part of directory hierarchy,
+:argadd **/... will result in too many args!
+
+when 'complete' includes many buffers or files, it is better to use i_CTRL-X_CTRL-I for completion

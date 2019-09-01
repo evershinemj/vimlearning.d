@@ -1,0 +1,27 @@
+VARIABLE NUMBER OF ARGUMENTS
+
+Vim enables you to define functions that have a variable number of arguments.
+The following command, for instance, defines a function that must have 1
+argument (start) and can have up to 20 additional arguments: >
+
+	:function Show(start, ...)
+
+The variable "a:1" contains the first optional argument, "a:2" the second, and
+so on.  The variable "a:0" contains the number of extra arguments.
+   For example: >
+
+	:function Show(start, ...)
+	:  echohl Title
+	:  echo "start is " . a:start
+	:  echohl None
+	:  let index = 1
+	:  while index <= a:0
+	:    echo "  Arg " . index . " is " . a:{index}
+	:    let index = index + 1
+	:  endwhile
+	:  echo ""
+	:endfunction
+
+This uses the ":echohl" command to specify the highlighting used for the
+following ":echo" command.  ":echohl None" stops it again.  The ":echon"
+command works like ":echo", but doesn't output a line break.

@@ -1,0 +1,11 @@
+★  Answer from https://stackoverflow.com/questions/2288756/how-to-set-working-current-directory-in-vim ★
+As already suggested, you can use autochdir, which will change to the directory of the file you opened, the other option is
+:cd mydirectory
+
+which will change the directory. This can be an absolute or relative path, so :cd .. will move up one level. Or you can use :cd %:h which will also change to the directory the current file is in, but without setting autochdir.
+:cd
+
+will change directory to your home directory (or on windows, print the current directory).
+:cd -
+
+will change the directory to the previous directory you visited.

@@ -1,0 +1,12 @@
+					*:hi-default* *:highlight-default*
+The [default] argument is used for setting the default highlighting for a
+group.	If highlighting has already been specified for the group the command
+will be ignored.  Also when there is an existing link.
+
+Using [default] is especially useful to overrule the highlighting of a
+specific syntax file.  For example, the C syntax file contains: >
+	:highlight default link cComment Comment
+If you like Question highlighting for C comments, put this in your vimrc file: >
+	:highlight link cComment Question
+Without the "default" in the C syntax file, the highlighting would be
+overruled when the syntax file is loaded.

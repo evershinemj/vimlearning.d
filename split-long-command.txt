@@ -1,0 +1,3 @@
+★  Answer from https://stackoverflow.com/questions/10831565/how-do-i-split-long-lines-in-a-vimrc-file ★
+autocmd FileType python set smartindent
+    \ cinwords+=with

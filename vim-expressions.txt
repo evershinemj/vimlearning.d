@@ -1,0 +1,26 @@
+*41.3*	Expressions
+
+Vim has a rich, yet simple way to handle expressions.  You can read the
+definition here: |expression-syntax|.  Here we will show the most common
+items.
+   The numbers, strings and variables mentioned above are expressions by
+themselves.  Thus everywhere an expression is expected, you can use a number,
+string or variable.  Other basic items in an expression are:
+
+	$NAME		environment variable
+	&name		option
+	@r		register
+
+Examples: >
+
+	:echo "The value of 'tabstop' is" &ts
+	:echo "Your home directory is" $HOME
+	:if @a > 5
+
+The &name form can be used to save an option value, set it to a new value,
+do something and restore the old value.  Example: >
+
+	:let save_ic = &ic
+	:set noic
+	:/The Start/,$delete
+	:let &ic = save_ic

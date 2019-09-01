@@ -1,0 +1,9 @@
+					*v:errors* *errors-variable*
+v:errors	Errors found by assert functions, such as |assert_true()|.
+		This is a list of strings.
+		The assert functions append an item when an assert fails.
+		To remove old results make it empty: >
+	:let v:errors = []
+<		If v:errors is set to anything but a list it is made an empty
+		list by the assert function.
+

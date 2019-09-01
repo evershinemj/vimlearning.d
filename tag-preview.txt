@@ -1,0 +1,5 @@
+							*tag-preview*
+The tag match list can also be used in the preview window.  The commands are
+the same as above, with a "p" prepended.
+{not available when compiled without the |+quickfix| feature}
+

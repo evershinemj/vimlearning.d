@@ -1,0 +1,6 @@
+zf{motion}  or
+{Visual}zf	Operator to create a fold.
+		This only works when 'foldmethod' is "manual" or "marker".
+		The new fold will be closed for the "manual" method.
+		'foldenable' will be set.
+		Also see |fold-create-marker|.

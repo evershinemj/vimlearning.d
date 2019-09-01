@@ -1,0 +1,4 @@
+							*:ptp* *:ptprevious*
+:[count]ptp[revious][!]	":tprevious" in the preview window.  See |:ptag|.
+			{not in Vi}
+

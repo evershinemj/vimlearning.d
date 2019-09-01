@@ -1,0 +1,12 @@
+			*'scrollbind'* *'scb'* *'noscrollbind'* *'noscb'*
+'scrollbind' 'scb'	boolean  (default off)
+			local to window
+			{not in Vi}
+			{not available when compiled without the |+scrollbind|
+			feature}
+	See also |scroll-binding|.  When this option is set, the current
+	window scrolls as other scrollbind windows (windows that also have
+	this option set) scroll.  This option is useful for viewing the
+	differences between two versions of a file, see 'diff'.
+	See |'scrollopt'| for options that determine how this option should be
+	interpreted.

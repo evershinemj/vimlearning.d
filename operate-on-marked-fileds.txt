@@ -1,0 +1,25 @@
+The following netrw maps make use of marked files:
+
+    |netrw-a|	Hide marked files/directories
+    |netrw-D|	Delete marked files/directories
+    |netrw-ma|	Move marked files' names to |arglist|
+    |netrw-mA|	Move |arglist| filenames to marked file list
+    |netrw-mb|	Append marked files to bookmarks
+    |netrw-mB|	Delete marked files from bookmarks
+    |netrw-mc|	Copy marked files to target
+    |netrw-md|	Apply vimdiff to marked files
+    |netrw-me|	Edit marked files
+    |netrw-mF|	Unmark marked files
+    |netrw-mg|	Apply vimgrep to marked files
+    |netrw-mm|	Move marked files to target
+    |netrw-mp|	Print marked files
+    |netrw-ms|	Netrw will source marked files
+    |netrw-mt|	Set target for |netrw-mm| and |netrw-mc|
+    |netrw-mT|	Generate tags using marked files
+    |netrw-mv|	Apply vim command to marked files
+    |netrw-mx|	Apply shell command to marked files
+    |netrw-mX|	Apply shell command to marked files, en bloc
+    |netrw-mz|	Compress/Decompress marked files
+    |netrw-O|	Obtain marked files
+    |netrw-R|	Rename marked files
+

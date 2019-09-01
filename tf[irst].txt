@@ -1,0 +1,3 @@
+							*:tf* *:tfirst*
+:[count]tf[irst][!]	Same as ":trewind".  {not in Vi}
+

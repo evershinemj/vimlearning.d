@@ -1,0 +1,4 @@
+							*:lmak* *:lmake*
+:lmak[e][!] [arguments]
+			Same as ":make", except the location list for the
+			current window is used instead of the quickfix list.

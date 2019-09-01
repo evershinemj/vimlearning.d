@@ -1,0 +1,17 @@
+						*'include'* *'inc'*
+'include' 'inc'		string	(default "^\s*#\s*include")
+			global or local to buffer |global-local|
+			{not in Vi}
+			{not available when compiled without the
+			|+find_in_path| feature}
+	Pattern to be used to find an include command.  It is a search
+	pattern, just like for the "/" command (See |pattern|).  The default
+	value is for C programs.  This option is used for the commands "[i",
+	"]I", "[d", etc.
+	Normally the 'isfname' option is used to recognize the file name that
+	comes after the matched pattern.  But if "\zs" appears in the pattern
+	then the text matched from "\zs" to the end, or until "\ze" if it
+	appears, is used as the file name.  Use this to include characters
+	that are not in 'isfname', such as a space.  You can then use
+	'includeexpr' to process the matched text.
+	See |option-backslash| about including spaces and backslashes.

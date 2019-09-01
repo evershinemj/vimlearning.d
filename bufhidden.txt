@@ -1,0 +1,8 @@
+The 'hidden' is global, it is used for all buffers.  The 'bufhidden' option
+can be used to make an exception for a specific buffer.  It can take these
+values:
+	<empty>		Use the value of 'hidden'.
+	hide		Hide this buffer, also when 'hidden' is not set.
+	unload		Don't hide but unload this buffer, also when 'hidden'
+			is set.
+	delete		Delete the buffer.

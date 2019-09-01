@@ -1,0 +1,8 @@
+CTRL-W t					*CTRL-W_t* *CTRL-W_CTRL-T*
+CTRL-W CTRL-T	Move cursor to top-left window.
+
+CTRL-W b					*CTRL-W_b* *CTRL-W_CTRL-B*
+CTRL-W CTRL-B	Move cursor to bottom-right window.
+
+CTRL-W p					*CTRL-W_p* *CTRL-W_CTRL-P*
+CTRL-W CTRL-P	Go to previous (last accessed) window.

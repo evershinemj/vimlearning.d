@@ -1,0 +1,5 @@
+							*:tr* *:trewind*
+:[count]tr[ewind][!]	Jump to first matching tag.  If [count] is given, jump
+			to [count]th matching tag.  See |tag-!| for [!].  {not
+			in Vi}
+

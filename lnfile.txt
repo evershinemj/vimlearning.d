@@ -1,0 +1,3 @@
+							*:lnf* *:lnfile*
+:[count]lnf[ile][!]	Same as ":cnfile", except the location list for the
+			current window is used instead of the quickfix list.

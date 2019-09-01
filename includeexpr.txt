@@ -1,0 +1,20 @@
+						*'includeexpr'* *'inex'*
+'includeexpr' 'inex'	string	(default "")
+			local to buffer
+			{not in Vi}
+			{not available when compiled without the
+			|+find_in_path| or |+eval| features}
+	Expression to be used to transform the string found with the 'include'
+	option to a file name.  Mostly useful to change "." to "/" for Java: >
+		:set includeexpr=substitute(v:fname,'\\.','/','g')
+<	The "v:fname" variable will be set to the file name that was detected.
+
+	Also used for the |gf| command if an unmodified file name can't be
+	found.  Allows doing "gf" on the name after an 'include' statement.
+	Also used for |<cfile>|.
+
+	The expression will be evaluated in the |sandbox| when set from a
+	modeline, see |sandbox-option|.
+
+	It is not allowed to change text or jump to another window while
+	evaluating 'includeexpr' |textlock|.

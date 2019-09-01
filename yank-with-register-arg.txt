@@ -1,0 +1,4 @@
+							*:y* *:yank* *E850*
+:[range]y[ank] [x]	Yank [range] lines [into register x]. Yanking to the
+			"* or "+ registers is possible only when the
+			|+clipboard| feature is included.

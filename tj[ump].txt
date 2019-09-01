@@ -1,0 +1,4 @@
+							*:tj* *:tjump*
+:tj[ump][!] [ident]	Like ":tselect", but jump to the tag directly when
+			there is only one match.  {not in Vi}
+

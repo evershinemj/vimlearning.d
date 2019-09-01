@@ -1,0 +1,11 @@
+z<Right>    or						*zl* *z<Right>*
+zl			Move the view on the text [count] characters to the
+			right, thus scroll the text [count] characters to the
+			left.  This only works when 'wrap' is off.  {not in
+			Vi}
+
+z<Left>      or						*zh* *z<Left>*
+zh			Move the view on the text [count] characters to the
+			left, thus scroll the text [count] characters to the
+			right.  This only works when 'wrap' is off.  {not in
+			Vi}

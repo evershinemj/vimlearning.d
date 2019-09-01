@@ -1,0 +1,11 @@
+							*zL*
+zL			Move the view on the text half a screenwidth to the
+			right, thus scroll the text half a screenwidth to the
+			left.  This only works when 'wrap' is off.  {not in
+			Vi}
+
+							*zH*
+zH			Move the view on the text half a screenwidth to the
+			left, thus scroll the text half a screenwidth to the
+			right.  This only works when 'wrap' is off.  {not in
+			Vi}

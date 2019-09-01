@@ -1,0 +1,3 @@
+Folded		line used for closed folds
+							*hl-FoldColumn*
+FoldColumn	'foldcolumn'

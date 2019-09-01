@@ -1,0 +1,44 @@
+Completion behavior				*:command-completion* *E179*
+					*E180* *E181* *:command-complete*
+By default, the arguments of user defined commands do not undergo completion.
+However, by specifying one or the other of the following attributes, argument
+completion can be enabled:
+
+	-complete=augroup	autocmd groups
+	-complete=buffer	buffer names
+	-complete=behave	:behave suboptions
+	-complete=color		color schemes
+	-complete=command	Ex command (and arguments)
+	-complete=compiler	compilers
+	-complete=cscope	|:cscope| suboptions
+	-complete=dir		directory names
+	-complete=environment	environment variable names
+	-complete=event		autocommand events
+	-complete=expression	Vim expression
+	-complete=file		file and directory names
+	-complete=file_in_path	file and directory names in |'path'|
+	-complete=filetype	filetype names |'filetype'|
+	-complete=function	function name
+	-complete=help		help subjects
+	-complete=highlight	highlight groups
+	-complete=history	:history suboptions
+	-complete=locale	locale names (as output of locale -a)
+	-complete=mapclear	buffer argument
+	-complete=mapping	mapping name
+	-complete=menu		menus
+	-complete=messages	|:messages| suboptions
+	-complete=option	options
+	-complete=packadd	optional package |pack-add| names
+	-complete=shellcmd	Shell command
+	-complete=sign		|:sign| suboptions
+	-complete=syntax	syntax file names |'syntax'|
+	-complete=syntime	|:syntime| suboptions
+	-complete=tag		tags
+	-complete=tag_listfiles	tags, file names are shown when CTRL-D is hit
+	-complete=user		user names
+	-complete=var		user variables
+	-complete=custom,{func} custom completion, defined via {func}
+	-complete=customlist,{func} custom completion, defined via {func}
+
+Note: That some completion methods might expand environment variables.
+

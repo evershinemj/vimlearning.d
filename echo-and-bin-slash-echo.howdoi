@@ -1,0 +1,10 @@
+★  Answer from https://stackoverflow.com/questions/37935201/shell-script-reason-for-using-bin-echo-instead-of-echo ★
+As others have pointed out, it is unlikely that those lines are correct, more likely they should be:
+ECHO="/bin/echo"
+GREP="/bin/grep"  # (for linux)
+
+Assuming that they are correct, code like this used to be commonly seen in shell scripts (not mine, I might add).  You don't see many people using these any more.
+echo:  ksh (Korn shell, which used to be the shell of choice), csh (C-shell, default shell on Sun) and sh (Bourne shell before it was POSIX) all had their own built-in versions of echo that were slightly different (mostly around the -n argument).  Therefore the stand-alone program /bin/echo was sometimes used for portability.  There is a performance price to pay for that.
+grep and others:  It used to be commonly recommended that the full path name for external programs should be set in a script.  The main reason was security.  In theory a user could provide their own version in a local directory and change their PATH variable.  PATH, and all other environment variables, is still considered a security risk by many.  A secondary reason was the performance overhead of searching the directories of $PATH - this was before the days of tracked aliases (ksh) or hashing (bash).
+I'll repeat that I don't subscribe to all these views, and I have had arguments over the years with those who do, however that is the explanation.  In my opinion this practice causes more problems than it solves.
+EDIT:  the practices I mention go back to the 1970s and 80s.  Why would they be in a script from 2011?  Possibly because "we always do that", a.k.a. "company policy", i.e. no one knows or cares why, we just do.  Alternatively it could be a case of copy n'paste from an old web-site or book, or even someone who believes this is a good idea.

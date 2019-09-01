@@ -1,0 +1,17 @@
+				    *Q* *mode-Ex* *Ex-mode* *Ex* *EX* *E501*
+Q			Switch to "Ex" mode.  This is a bit like typing ":"
+			commands one after another, except:
+			- You don't have to keep pressing ":".
+			- The screen doesn't get updated after each command.
+			- There is no normal command-line editing.
+			- Mappings and abbreviations are not used.
+			In fact, you are editing the lines with the "standard"
+			line-input editing commands (<Del> or <BS> to erase,
+			CTRL-U to kill the whole line).
+			Vim will enter this mode by default if it's invoked as
+			"ex" on the command-line.
+			Use the ":vi" command |:visual| to exit "Ex" mode.
+			Note: In older versions of Vim "Q" formatted text,
+			that is now done with |gq|.  But if you use the
+			|vimrc_example.vim| script "Q" works like "gq".
+

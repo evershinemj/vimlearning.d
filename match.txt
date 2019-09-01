@@ -1,0 +1,14 @@
+match({expr}, {pat} [, {start} [, {count}]])			*match()*
+		When {expr} is a |List| then this returns the index of the
+		first item where {pat} matches.  Each item is used as a
+		String, |Lists| and |Dictionaries| are used as echoed.
+		Otherwise, {expr} is used as a String.  The result is a
+		Number, which gives the index (byte offset) in {expr} where
+		{pat} matches.
+		A match at the first character or |List| item returns zero.
+		If there is no match -1 is returned.
+		For getting submatches see |matchlist()|.
+		Example: >
+			:echo match("testing", "ing")	" results in 4
+			:echo match([1, 'x'], '\a')	" results in 1
+<		See |string-match| for how {pat} is used.

@@ -1,0 +1,15 @@
+★  Answer from https://stackoverflow.com/questions/17508542/how-do-i-set-the-default-font-size-in-vim ★
+For the first one remove the spaces. Whitespace matters for the set command.
+set guifont=Monaco:h20
+
+For the second one it should be (the h specifies the height)
+set guifont=Monospace:h20
+
+My recommendation for setting the font is to do (if your version supports it)
+set guifont=*
+
+This will pop up a menu that allows you to select the font. After this type
+set guifont?
+
+To show what the current guifont is set to. After that copy that line into your vimrc or gvimrc. If there are spaces in the font add a \ to escape the space.
+set guifont=Monospace\ 20

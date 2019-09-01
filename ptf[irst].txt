@@ -1,0 +1,3 @@
+							*:ptf* *:ptfirst*
+:[count]ptf[irst][!]	Same as ":ptrewind".  {not in Vi}
+

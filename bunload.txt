@@ -1,0 +1,26 @@
+:[N]bun[load][!]				*:bun* *:bunload* *E515*
+:bun[load][!] [N]
+		Unload buffer [N] (default: current buffer).  The memory
+		allocated for this buffer will be freed.  The buffer remains
+		in the buffer list.
+		If the buffer was changed, this fails, unless when [!] is
+		specified, in which case the changes are lost.
+		Any windows for this buffer are closed.  If buffer [N] is the
+		current buffer, another buffer will be displayed instead.
+		This is the most recent entry in the jump list that points
+		into a loaded buffer.
+
+:bunload[!] {bufname}
+		Like ":bunload[!] [N]", but buffer given by name.  Note that a
+		buffer whose name is a number cannot be referenced by that
+		name; use the buffer number instead.  Insert a backslash
+		before a space in a buffer name.
+
+:N,Mbunload[!]	Do ":bunload[!]" for all buffers in the range N to M
+		|inclusive|.
+
+:bunload[!] N1 N2 ...
+		Do ":bunload[!]" for buffer N1, N2, etc.  The arguments can be
+		buffer numbers or buffer names (but not buffer names that are
+		a number).  Insert a backslash before a space in a buffer
+		name.

@@ -1,0 +1,34 @@
+							*:ts* *:tselect*
+:ts[elect][!] [ident]	List the tags that match [ident], using the
+			information in the tags file(s).
+			When [ident] is not given, the last tag name from the
+			tag stack is used.
+			See |tag-!| for [!].
+			With a '>' in the first column is indicated which is
+			the current position in the list (if there is one).
+			[ident] can be a regexp pattern, see |tag-regexp|.
+			See |tag-priority| for the priorities used in the
+			listing.  {not in Vi}
+			Example output:
+
+>
+	 nr pri kind tag		file
+	  1 F	f    mch_delay		os_amiga.c
+			mch_delay(msec, ignoreinput)
+	> 2 F	f    mch_delay		os_msdos.c
+			mch_delay(msec, ignoreinput)
+	  3 F	f    mch_delay		os_unix.c
+			mch_delay(msec, ignoreinput)
+	Enter nr of choice (<CR> to abort):
+<
+			See |tag-priority| for the "pri" column.  Note that
+			this depends on the current file, thus using
+			":tselect xxx" can produce different results.
+			The "kind" column gives the kind of tag, if this was
+			included in the tags file.
+			The "info" column shows information that could be
+			found in the tags file.  It depends on the program
+			that produced the tags file.
+			When the list is long, you may get the |more-prompt|.
+			If you already see the tag you want to use, you can
+			type 'q' and enter the number.

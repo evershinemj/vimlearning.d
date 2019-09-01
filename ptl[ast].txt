@@ -1,0 +1,4 @@
+							*:ptl* *:ptlast*
+:ptl[ast][!]		":tlast" in the preview window.  See |:ptag|.
+			{not in Vi}
+

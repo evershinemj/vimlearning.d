@@ -1,0 +1,11 @@
+							*'cinkeys'* *'cink'*
+'cinkeys' 'cink'	string	(default "0{,0},0),:,0#,!^F,o,O,e")
+			local to buffer
+			{not in Vi}
+			{not available when compiled without the |+cindent|
+			feature}
+	A list of keys that, when typed in Insert mode, cause reindenting of
+	the current line.  Only used if 'cindent' is on and 'indentexpr' is
+	empty.
+	For the format of this option see |cinkeys-format|.
+	See |C-indenting|.

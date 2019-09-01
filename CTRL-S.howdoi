@@ -1,0 +1,7 @@
+★  Answer from https://stackoverflow.com/questions/3446320/in-vim-how-to-map-save-to-ctrl-s ★
+Ctrl+S is a common command to terminals to stop updating, it was a way to slow the output so you could read it on terminals that didn't have a scrollback buffer.  First find out if you can [configure your xterm](http://vim.wikia.com/wiki/Map_Ctrl-S_to_save_current_or_new_files) to pass Ctrl+S through to the application.  Then these map commands will work:
+noremap <silent> <C-S>          :update<CR>
+vnoremap <silent> <C-S>         <C-C>:update<CR>
+inoremap <silent> <C-S>         <C-O>:update<CR>
+
+BTW: if Ctrl+S freezes your terminal, type Ctrl+Q to get it going again.

@@ -1,0 +1,3 @@
+	##	Is replaced with all names in the argument list	  *:_##* *c_##*
+		concatenated, separated by spaces.  Each space in a name
+		is preceded with a backslash.

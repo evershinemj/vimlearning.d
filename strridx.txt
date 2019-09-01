@@ -1,0 +1,14 @@
+strridx({haystack}, {needle} [, {start}])			*strridx()*
+		The result is a Number, which gives the byte index in
+		{haystack} of the last occurrence of the String {needle}.
+		When {start} is specified, matches beyond this index are
+		ignored.  This can be used to find a match before a previous
+		match: >
+			:let lastcomma = strridx(line, ",")
+			:let comma2 = strridx(line, ",", lastcomma - 1)
+<		The search is done case-sensitive.
+		For pattern searches use |match()|.
+		-1 is returned if the {needle} does not occur in {haystack}.
+		If the {needle} is empty the length of {haystack} is returned.
+		See also |stridx()|.  Examples: >
+		  :echo strridx("an angry armadillo", "an")	     3

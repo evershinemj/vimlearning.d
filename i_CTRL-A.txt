@@ -1,0 +1,2 @@
+						*i_CTRL-A*
+CTRL-A		Insert previously inserted text.  {not in Vi}

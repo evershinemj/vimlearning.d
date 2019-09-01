@@ -1,0 +1,20 @@
+						*function-range-example*  >
+	:function Mynumber(arg)
+	:  echo line(".") . " " . a:arg
+	:endfunction
+	:1,5call Mynumber(getline("."))
+<
+		The "a:firstline" and "a:lastline" are defined anyway, they
+		can be used to do something different at the start or end of
+		the range.
+
+		Example of a function that handles the range itself: >
+
+	:function Cont() range
+	:  execute (a:firstline + 1) . "," . a:lastline . 's/^/\t\\ '
+	:endfunction
+	:4,8call Cont()
+<
+		This function inserts the continuation character "\" in front
+		of all the lines in the range, except the first one.
+

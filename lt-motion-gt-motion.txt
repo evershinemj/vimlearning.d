@@ -1,0 +1,4 @@
+							*<*
+<{motion}		Shift {motion} lines one 'shiftwidth' leftwards.
+							*>*
+ >{motion}		Shift {motion} lines one 'shiftwidth' rightwards.

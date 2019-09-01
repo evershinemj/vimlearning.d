@@ -1,0 +1,68 @@
+MARKER						*fold-marker*
+
+Markers in the text tell where folds start and end.  This allows you to
+precisely specify the folds.  This will allow deleting and putting a fold,
+without the risk of including the wrong lines.  The 'foldtext' option is
+normally set such that the text before the marker shows up in the folded line.
+This makes it possible to give a name to the fold.
+
+Markers can have a level included, or can use matching pairs.  Including a
+level is easier, you don't have to add end markers and avoid problems with
+non-matching marker pairs.  Example: >
+	/* global variables {{{1 */
+	int varA, varB;
+
+	/* functions {{{1 */
+	/* funcA() {{{2 */
+	void funcA() {}
+
+	/* funcB() {{{2 */
+	void funcB() {}
+
+A fold starts at a "{{{" marker.  The following number specifies the fold
+level.  What happens depends on the difference between the current fold level
+and the level given by the marker:
+1. If a marker with the same fold level is encountered, the previous fold
+   ends and another fold with the same level starts.
+2. If a marker with a higher fold level is found, a nested fold is started.
+3. If a marker with a lower fold level is found, all folds up to and including
+   this level end and a fold with the specified level starts.
+
+The number indicates the fold level.  A zero cannot be used (a marker with
+level zero is ignored).  You can use "}}}" with a digit to indicate the level
+of the fold that ends.  The fold level of the following line will be one less
+than the indicated level.  Note that Vim doesn't look back to the level of the
+matching marker (that would take too much time).  Example: >
+
+	{{{1
+	fold level here is 1
+	{{{3
+	fold level here is 3
+	}}}3
+	fold level here is 2
+
+You can also use matching pairs of "{{{" and "}}}" markers to define folds.
+Each "{{{" increases the fold level by one, each "}}}" decreases the fold
+level by one.  Be careful to keep the markers matching!  Example: >
+
+	{{{
+	fold level here is 1
+	{{{
+	fold level here is 2
+	}}}
+	fold level here is 1
+
+You can mix using markers with a number and without a number.  A useful way of
+doing this is to use numbered markers for large folds, and unnumbered markers
+locally in a function.  For example use level one folds for the sections of
+your file like "structure definitions", "local variables" and "functions".
+Use level 2 markers for each definition and function,  Use unnumbered markers
+inside functions.  When you make changes in a function to split up folds, you
+don't have to renumber the markers.
+
+The markers can be set with the 'foldmarker' option.  It is recommended to
+keep this at the default value of "{{{,}}}", so that files can be exchanged
+between Vim users.  Only change it when it is required for the file (e.g., it
+contains markers from another folding editor, or the default markers cause
+trouble for the language of the file).
+

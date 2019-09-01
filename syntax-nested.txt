@@ -1,0 +1,21 @@
+==============================================================================
+*44.5*	Nested items
+
+Take a look at this comment:
+
+	%Get input  TODO: Skip white space ~
+
+You want to highlight TODO in big yellow letters, even though it is in a
+comment that is highlighted blue.  To let Vim know about this, you define the
+following syntax groups: >
+
+	:syntax keyword xTodo TODO contained
+	:syntax match xComment /%.*/ contains=xTodo
+
+In the first line, the "contained" argument tells Vim that this keyword can
+exist only inside another syntax item.  The next line has "contains=xTodo".
+This indicates that the xTodo syntax element is inside it.  The result is that
+the comment line as a whole is matched with "xComment" and made blue.  The
+word TODO inside it is matched by xTodo and highlighted yellow (highlighting
+for xTodo was setup for this).
+

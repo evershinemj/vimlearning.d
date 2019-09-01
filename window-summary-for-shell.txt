@@ -1,0 +1,40 @@
+
+Opening and closing windows:
+    CTRL-W -s        same as :sp
+    CTRL-W CTRL-S         same as CTRL-W -s, but only works in gvim. Terminal eats CTRL-S (CTRL-V 019)
+    CTRL-W CTRL-V         same as :vsp
+    CTRL-W CTRL-N         Create a new window and start editing an empty file in it.
+    :[N]new     same as CTRL-W CTRL-N , but make window N high
+    :[N]vnew    same as CTRL-W CTRL-V , but make window N wide
+    :[N]sf[ind]
+    :[N]sv[iew]
+    CTRL-W [N]^         same as :split #[N]
+    :hide
+    :hide {cmd} e.g. :hide edit Makefile
+    CTRL-W CTRL-O         same as :only
+    CTRL-W -q        same as :q
+    CTRL-W CTRL-Q         same as CTRL-W -q, but only works in gvim. Terminal eats CTRL-Q (CTRL-V 017)
+
+Moving cursor among windows:
+    CTRL-W CTRL-W 
+    CTRL-W CTRL-T  CTRL-W CTRL-B  CTRL-W CTRL-P 
+
+Moving windows:
+    CTRL-W CTRL-R     cursor moving with windows
+    CTRL-W CTRL-X     cursor in original position
+
+Resizing windows:
+    :res[ize] [N]   resize to N lines. Without N, resize to the largest
+    :res[ize] +N    
+    :res[ize] -N
+    z{N}<CR>    same as :res[ize] N
+    :vertical :res[ize] [N]
+    :vertical :res[ize] +N
+    :vertical :res[ize] -N
+    CTRL-W [count]+
+    CTRL-W [count]-
+    CTRL-W [count]_  same as :res[ize] [N]
+    CTRL-W [count]<
+    CTRL-W [count]>
+    CTRL-W [count]|  same as :vertical :res [N]
+

@@ -1,0 +1,35 @@
+★  Answer from https://stackoverflow.com/questions/18160053/vim-line-completion-with-external-file ★
+I think the only way to achieve what you want is with a custom complete-function. See help complete-functions for the (very useful!) documentation. Here's my attempt at a solution:
+First you need a separate function to silently grep a file for a string (if you just call the naked vimgrep function you will get an ugly error if there are no matches).
+function! SilentFileGrep( leader, file )
+    try
+        exe 'vimgrep /^\s*' . a:leader . '.*/j ' . a:file
+    catch /.*/
+        echo "no matches"
+    endtry
+endfunction
+
+Now, here's your completion function. Note that the path to the file you want to search is hard-coded in here, but you could change it to use a variable if you so wish. We call SilentFileGrep(), which dumps the results in the quickfix list. Then we extract the results from the qflist (trimming the leading whitespace) and clear the qflist before returning the results.
+function! LineCompleteFromFile(findstart,base)
+    if a:findstart
+        " column to begin searching from (first non-whitespace column):
+        return match(getline("."),'\S')
+    else
+        " grep the file and build list of results:
+        let path = <path_to_file>
+        call SilentFileGrep( a:base, path )
+        let matches = []
+        for thismatch in getqflist()
+            " trim leading whitespace
+            call add(matches, matchstr(thismatch.text,'\S.*'))
+        endfor
+        call setqflist([])
+        return matches
+    endif
+endfunction
+
+To use this function, you need to set the completefunc option to point at it:
+set completefunc=LineCompleteFromFile
+
+Then you can use <C-X><C-U> to invoke the completion, which you could easily map to <C-X><C-L>.
+This seems to work pretty well for me, but it is not exhaustively tested.

@@ -1,0 +1,4 @@
+							*v_g_CTRL-]*
+{Visual}g CTRL-]	Same as "g CTRL-]", but use the highlighted text as
+			the identifier.  {not in Vi}
+

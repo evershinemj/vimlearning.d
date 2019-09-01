@@ -1,0 +1,4 @@
+Instead of putting plugins directly into the plugin/ directory, you may
+better organize them by putting them into subdirectories under plugin/.
+As an example, consider using "~/.vim/plugin/perl/*.vim" for all your Perl
+plugins.

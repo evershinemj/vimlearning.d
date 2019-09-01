@@ -1,0 +1,9 @@
+Completing Vim commands					*compl-vim*
+
+Completion is context-sensitive.  It works like on the Command-line.  It
+completes an Ex command as well as its arguments.  This is useful when writing
+a Vim script.
+
+							*i_CTRL-X_CTRL-V*
+CTRL-X CTRL-V		Guess what kind of item is in front of the cursor and
+			find the first match for it.

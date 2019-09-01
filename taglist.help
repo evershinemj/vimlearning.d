@@ -1,0 +1,16 @@
+" <enter> : Jump to tag definition
+" o : Jump to tag definition in new window
+" p : Preview the tag definition
+" <space> : Display tag prototype
+" u : Update tag list
+" s : Select sort field
+" d : Remove file from taglist
+" x : Zoom-out/Zoom-in taglist window
+" + : Open a fold
+" - : Close a fold
+" * : Open all folds
+" = : Close all folds
+" [[ : Move to the start of previous file
+" ]] : Move to the start of next file
+" q : Close the taglist window
+" <F1> : Remove help text

@@ -1,0 +1,14 @@
+							*type()*
+type({expr})	The result is a Number representing the type of {expr}.
+		Instead of using the number directly, it is better to use the
+		v:t_ variable that has the value:
+			Number:	    0  |v:t_number|
+			String:	    1  |v:t_string|
+			Funcref:    2  |v:t_func|
+			List:	    3  |v:t_list|
+			Dictionary: 4  |v:t_dict|
+			Float:	    5  |v:t_float|
+			Boolean:    6  |v:t_bool| (v:false and v:true)
+			None	    7  |v:t_none| (v:null and v:none)
+			Job	    8  |v:t_job|
+			Channel	    9  |v:t_channel|

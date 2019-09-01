@@ -1,0 +1,28 @@
+			     *'smartindent'* *'si'* *'nosmartindent'* *'nosi'*
+'smartindent' 'si'	boolean	(default off)
+			local to buffer
+			{not in Vi}
+			{not available when compiled without the
+			|+smartindent| feature}
+	Do smart autoindenting when starting a new line.  Works for C-like
+	programs, but can also be used for other languages.  'cindent' does
+	something like this, works better in most cases, but is more strict,
+	see |C-indenting|.  When 'cindent' is on or 'indentexpr' is set,
+	setting 'si' has no effect.  'indentexpr' is a more advanced
+	alternative.
+	Normally 'autoindent' should also be on when using 'smartindent'.
+	An indent is automatically inserted:
+	- After a line ending in '{'.
+	- After a line starting with a keyword from 'cinwords'.
+	- Before a line starting with '}' (only with the "O" command).
+	When typing '}' as the first character in a new line, that line is
+	given the same indent as the matching '{'.
+	When typing '#' as the first character in a new line, the indent for
+	that line is removed, the '#' is put in the first column.  The indent
+	is restored for the next line.  If you don't want this, use this
+	mapping: ":inoremap # X^H#", where ^H is entered with CTRL-V CTRL-H.
+	When using the ">>" command, lines starting with '#' are not shifted
+	right.
+	NOTE: This option is reset when 'compatible' is set.
+	This option is reset when 'paste' is set and restored when 'paste' is
+	reset.

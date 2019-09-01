@@ -1,0 +1,16 @@
+:on[ly][!]
+:{count}on[ly][!]
+CTRL-W o						*CTRL-W_o* *E445*
+CTRL-W CTRL-O					*CTRL-W_CTRL-O* *:on* *:only*
+		Make the current window the only one on the screen.  All other
+		windows are closed.  For {count} see |:quit| command.
+		
+		When the 'hidden' option is set, all buffers in closed windows
+		become hidden.
+		
+		When 'hidden' is not set, and the 'autowrite' option is set,
+		modified buffers are written.  Otherwise, windows that have
+		buffers that are modified are not removed, unless the [!] is
+		given, then they become hidden.  But modified buffers are
+		never abandoned, so changes cannot get lost.
+

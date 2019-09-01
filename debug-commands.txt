@@ -1,0 +1,61 @@
+							*>cont*
+	cont		Continue execution until the next breakpoint is hit.
+							*>quit*
+	quit		Abort execution.  This is like using CTRL-C, some
+			things might still be executed, doesn't abort
+			everything.  Still stops at the next breakpoint.
+							*>next*
+	next		Execute the command and come back to debug mode when
+			it's finished.  This steps over user function calls
+			and sourced files.
+							*>step*
+	step		Execute the command and come back to debug mode for
+			the next command.  This steps into called user
+			functions and sourced files.
+							*>interrupt*
+	interrupt	This is like using CTRL-C, but unlike ">quit" comes
+			back to debug mode for the next command that is
+			executed.  Useful for testing |:finally| and |:catch|
+			on interrupt exceptions.
+							*>finish*
+	finish		Finish the current script or user function and come
+			back to debug mode for the command after the one that
+			sourced or called it.
+							*>bt*
+							*>backtrace*
+							*>where*
+	backtrace	Show the call stacktrace for current debugging session.
+	bt
+	where
+							*>frame*
+	frame N		Goes to N backtrace level. + and - signs make movement
+			relative.  E.g., ":frame +3" goes three frames up.
+							*>up*
+	up		Goes one level up from call stacktrace.
+							*>down*
+	down		Goes one level down from call stacktrace.
+
+About the additional commands in debug mode:
+- There is no command-line completion for them, you get the completion for the
+  normal Ex commands only.
+- You can shorten them, up to a single character, unless more than one command
+  starts with the same letter.  "f" stands for "finish", use "fr" for "frame".
+- Hitting <CR> will repeat the previous one.  When doing another command, this
+  is reset (because it's not clear what you want to repeat).
+- When you want to use the Ex command with the same name, prepend a colon:
+  ":cont", ":next", ":finish" (or shorter).
+
+The backtrace shows the hierarchy of function calls, e.g.:
+	>bt ~
+	  3 function One[3] ~
+	  2 Two[3] ~
+	->1 Three[3] ~
+	  0 Four ~
+	line 1: let four = 4 ~
+
+The "->" points to the current frame.  Use "up", "down" and "frame N" to
+select another frame.
+
+In the current frame you can evaluate the local function variables.  There is
+no way to see the command at the current line yet.
+

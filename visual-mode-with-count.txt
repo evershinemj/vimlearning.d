@@ -1,0 +1,26 @@
+						*v* *characterwise-visual*
+[count]v		Start Visual mode per character.
+			With [count] select the same number of characters or
+			lines as used for the last Visual operation, but at
+			the current cursor position, multiplied by [count].
+			When the previous Visual operation was on a block both
+			the width and height of the block are multiplied by
+			[count].
+			When there was no previous Visual operation [count]
+			characters are selected.  This is like moving the
+			cursor right N * [count] characters.  One less when
+			'selection' is not "exclusive".
+
+						*V* *linewise-visual*
+[count]V		Start Visual mode linewise.
+			With [count] select the same number of lines as used
+			for the last Visual operation, but at the current
+			cursor position, multiplied by [count].  When there
+			was no previous Visual operation [count] lines are
+			selected.
+
+						*CTRL-V* *blockwise-visual*
+[count]CTRL-V		Start Visual mode blockwise.  Note: Under Windows
+			CTRL-V could be mapped to paste text, it doesn't work
+			to start Visual mode then, see |CTRL-V-alternative|.
+			[count] is used as with `v` above.

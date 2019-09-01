@@ -1,0 +1,11 @@
+							*[z*
+[z		Move to the start of the current open fold.  If already at the
+		start, move to the start of the fold that contains it.  If
+		there is no containing fold, the command fails.
+		When a count is used, repeats the command [count] times.
+
+							*]z*
+]z		Move to the end of the current open fold.  If already at the
+		end, move to the end of the fold that contains it.  If there
+		is no containing fold, the command fails.
+		When a count is used, repeats the command [count] times.

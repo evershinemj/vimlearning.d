@@ -1,0 +1,19 @@
+A function can be called in an expression.  Example: >
+
+	:let line = getline(".")
+	:let repl = substitute(line, '\a', "*", "g")
+	:call setline(".", repl)
+
+The getline() function obtains a line from the current buffer.  Its argument
+is a specification of the line number.  In this case "." is used, which means
+the line where the cursor is.
+   The substitute() function does something similar to the ":substitute"
+command.  The first argument is the string on which to perform the
+substitution.  The second argument is the pattern, the third the replacement
+string.  Finally, the last arguments are the flags.
+   The setline() function sets the line, specified by the first argument, to a
+new string, the second argument.  In this example the line under the cursor is
+replaced with the result of the substitute().  Thus the effect of the three
+statements is equal to: >
+
+	:substitute/\a/*/g

@@ -1,0 +1,4 @@
+							*:stj* *:stjump*
+:stj[ump][!] [ident]	Does ":tjump[!] [ident]" and splits the window for the
+			selected tag.  {not in Vi}
+

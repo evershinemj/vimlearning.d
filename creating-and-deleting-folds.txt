@@ -1,0 +1,36 @@
+CREATING AND DELETING FOLDS ~
+							*zf* *E350*
+zf{motion}  or
+{Visual}zf	Operator to create a fold.
+		This only works when 'foldmethod' is "manual" or "marker".
+		The new fold will be closed for the "manual" method.
+		'foldenable' will be set.
+		Also see |fold-create-marker|.
+
+							*zF*
+zF		Create a fold for [count] lines.  Works like "zf".
+
+:{range}fo[ld]						*:fold* *:fo*
+		Create a fold for the lines in {range}.  Works like "zf".
+
+							*zd* *E351*
+zd		Delete one fold at the cursor.  When the cursor is on a folded
+		line, that fold is deleted.  Nested folds are moved one level
+		up.  In Visual mode one level of all folds (partially) in the
+		selected area are deleted.
+		Careful: This easily deletes more folds than you expect and
+		there is no undo for manual folding.
+		This only works when 'foldmethod' is "manual" or "marker".
+		Also see |fold-delete-marker|.
+
+							*zD*
+zD		Delete folds recursively at the cursor.  In Visual mode all
+		folds (partially) in the selected area and all nested folds in
+		them are deleted.
+		This only works when 'foldmethod' is "manual" or "marker".
+		Also see |fold-delete-marker|.
+
+							*zE* *E352*
+zE		Eliminate all folds in the window.
+		This only works when 'foldmethod' is "manual" or "marker".
+		Also see |fold-delete-marker|.

@@ -1,0 +1,21 @@
+							*/\zs*
+\zs	Matches at any position, and sets the start of the match there: The
+	next char is the first char of the whole match. |/zero-width|
+	Example: >
+		/^\s*\zsif
+<	matches an "if" at the start of a line, ignoring white space.
+	Can be used multiple times, the last one encountered in a matching
+	branch is used.  Example: >
+		/\(.\{-}\zsFab\)\{3}
+<	Finds the third occurrence of "Fab".
+	This cannot be followed by a multi. *E888*
+	{not in Vi} {not available when compiled without the |+syntax| feature}
+							*/\ze*
+\ze	Matches at any position, and sets the end of the match there: The
+	previous char is the last char of the whole match. |/zero-width|
+	Can be used multiple times, the last one encountered in a matching
+	branch is used.
+	Example: "end\ze\(if\|for\)" matches the "end" in "endif" and
+	"endfor".
+	This cannot be followed by a multi. |E888|
+	{not in Vi} {not available when compiled without the |+syntax| feature}

@@ -1,0 +1,5 @@
+							*:ptj* *:ptjump*
+:ptj[ump][!] [ident]	Does ":tjump[!] [ident]" and shows the new tag in a
+			"Preview" window.  See |:ptag| for more info.
+			{not in Vi}
+

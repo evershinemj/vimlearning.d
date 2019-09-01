@@ -1,0 +1,11 @@
+							*zj*
+zj		Move downwards to the start of the next fold.  A closed fold
+		is counted as one fold.
+		When a count is used, repeats the command [count] times.
+		This command can be used after an |operator|.
+
+							*zk*
+zk		Move upwards to the end of the previous fold.  A closed fold
+		is counted as one fold.
+		When a count is used, repeats the command [count] times.
+		This command can be used after an |operator|.

@@ -1,0 +1,9 @@
+					*'commentstring'* *'cms'* *E537*
+'commentstring' 'cms'	string	(default "/*%s*/")
+			local to buffer
+			{not in Vi}
+			{not available when compiled without the |+folding|
+			feature}
+	A template for a comment.  The "%s" in the value is replaced with the
+	comment text.  Currently only used to add markers for folding, see
+	|fold-marker|.

@@ -1,0 +1,54 @@
+String manipulation:
+        tolower()
+        toupper()
+        strlen()
+        stridx()                like indexOf()
+
+List manipulation:
+        get()                   get an item without error for wrong index
+        len()			number of items in a List
+	add()			append an item to a List
+	extend()		append a List to a List
+	remove()		remove one or more items from a List
+	copy()			make a shallow copy of a List
+	deepcopy()		make a full copy of a List
+	filter()		remove selected items from a List
+	map()			change each List item
+	sort()			sort a List
+	reverse()		reverse the order of a List
+	uniq()			remove copies of repeated adjacent items
+	split()			split a String into a List
+	join()			join List items into a String
+	range()			return a List with a sequence of numbers
+	string()		String representation of a List
+	index()			index of a value in a List
+	max()			maximum value in a List
+	min()			minimum value in a List
+	count()			count number of times a value appears in a List
+
+Dictionary manipulation:
+	get()			get an entry without an error for a wrong key
+	len()			number of entries in a Dictionary
+	has_key()		check whether a key appears in a Dictionary
+	empty()			check if Dictionary is empty
+	remove()		remove an entry from a Dictionary
+	extend()		add entries from one Dictionary to another
+	filter()		remove selected entries from a Dictionary
+	map()			change each Dictionary entry
+	keys()			get List of Dictionary keys
+	values()		get List of Dictionary values
+	items()			get List of Dictionary key-value pairs
+	copy()			make a shallow copy of a Dictionary
+	deepcopy()		make a full copy of a Dictionary
+	string()		String representation of a Dictionary
+	max()			maximum value in a Dictionary
+	min()			minimum value in a Dictionary
+	count()			count number of times a value appears
+
+Cursor and mark position:
+        col()
+        line()
+
+Working with text in the current buffer:		*text-functions*
+        getline()
+        setline()

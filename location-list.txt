@@ -1,0 +1,16 @@
+						*location-list* *E776*
+A location list is a window-local quickfix list. You get one after commands
+like `:lvimgrep`, `:lgrep`, `:lhelpgrep`, `:lmake`, etc., which create a
+location list instead of a quickfix list as the corresponding `:vimgrep`,
+`:grep`, `:helpgrep`, `:make` do.
+A location list is associated with a window and each window can have a
+separate location list.  A location list can be associated with only one
+window.  The location list is independent of the quickfix list.
+
+When a window with a location list is split, the new window gets a copy of the
+location list.  When there are no longer any references to a location list,
+the location list is destroyed.
+
+The following quickfix commands can be used.  The location list commands are
+similar to the quickfix commands, replacing the 'c' prefix in the quickfix
+command with 'l'.

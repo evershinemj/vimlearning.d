@@ -1,0 +1,6 @@
+							*:cnf* *:cnfile*
+:[count]cnf[ile][!]	Display the first error in the [count] next file in
+			the list that includes a file name.  If there are no
+			file names at all or if there is no next file, go to
+			the [count] next error.  See |:cc| for [!] and
+			'switchbuf'.

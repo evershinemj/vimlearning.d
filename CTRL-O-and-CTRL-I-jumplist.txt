@@ -1,0 +1,11 @@
+							*CTRL-O*
+CTRL-O			Go to [count] Older cursor position in jump list
+			(not a motion command).
+			{not in Vi}
+			{not available without the |+jumplist| feature}
+
+<Tab>		or					*CTRL-I* *<Tab>*
+CTRL-I			Go to [count] newer cursor position in jump list
+			(not a motion command).
+			{not in Vi}
+			{not available without the |+jumplist| feature}
