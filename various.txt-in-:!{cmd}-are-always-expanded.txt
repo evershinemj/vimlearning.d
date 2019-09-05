@@ -1,9 +1,0 @@
-			If {cmd} contains "%" it is expanded to the current
-			file name.  Special characters are not escaped, use
-			quotes to avoid their special meaning: >
-				:!ls "%"
-<			If the file name contains a "$" single quotes might
-			work better (but a single quote causes trouble): >
-				:!ls '%'
-<			This should always work, but it's more typing: >
-				:exe "!ls " . shellescape(expand("%"))
