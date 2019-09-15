@@ -1,4 +1,0 @@
-\%(\)	A pattern enclosed by escaped parentheses.	*/\%(\)* */\%(* *E53*
-	Just like \(\), but without counting it as a sub-expression.  This
-	allows using more groups and it's a little bit faster.
-	{not in Vi}

@@ -1,5 +1,0 @@
-							*/\=*
-\=	Matches 0 or 1 of the preceding atom, as many as possible. {not in Vi}
-	Example		matches ~
-	foo\=		"fo" and "foo"
-
